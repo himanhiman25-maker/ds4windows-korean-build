@@ -2,6 +2,8 @@ name: Build DS4Windows 4.6.7 Korean
 
 on:
   workflow_dispatch:
+  push:
+    branches: [fix/korean-ui-threading]
 
 permissions:
   contents: read
@@ -11,6 +13,36 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  upstream-baseline:
+    # Diagnose whether any headless WPF failures also exist without our overlay.
+    if: github.event.repository.private == false && github.event_name == 'push'
+    runs-on: windows-2022
+    timeout-minutes: 20
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          repository: hbashton/DS4Windows
+          ref: 080495de61ae8b6ada6b4252337838e8b22119b8
+          persist-credentials: false
+      - uses: actions/setup-dotnet@v6.0.0
+        with:
+          dotnet-version: 8.0.x
+      - name: Test the unchanged upstream release
+        shell: pwsh
+        run: |
+          dotnet test DS4WindowsTests/DS4WindowsTests.csproj -c Release -p:Platform=x64 --logger "trx;LogFileName=upstream.trx" --results-directory "$env:GITHUB_WORKSPACE/baseline-results"
+          if ($LASTEXITCODE -ne 0) { throw 'Unchanged upstream baseline tests failed.' }
+      - name: Upload upstream comparison results
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: DS4Windows-upstream-baseline
+          retention-days: 1
+          if-no-files-found: ignore
+          path: baseline-results/*.trx
+
   build:
     # Public-repository standard runners only. Never spend private-repo quota.
     if: github.event.repository.private == false
@@ -20,15 +52,15 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: '1'
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
       PYTHONUTF8: '1'
-      BUILD_LABEL: VIIPERRC4.6.7-ko.1
+      BUILD_LABEL: VIIPERRC4.6.7-ko.2
     steps:
       - name: Check out Korean overlay
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
 
       - name: Check out the exact upstream release
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           repository: hbashton/DS4Windows
           ref: 080495de61ae8b6ada6b4252337838e8b22119b8
@@ -36,12 +68,12 @@ jobs:
           persist-credentials: false
 
       - name: Set up .NET 8 on GitHub's server
-        uses: actions/setup-dotnet@v4
+        uses: actions/setup-dotnet@v6.0.0
         with:
           dotnet-version: 8.0.x
 
       - name: Set up Python on GitHub's server
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.1.0
         with:
           python-version: '3.12'
 
@@ -105,7 +137,7 @@ jobs:
           "@ | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
 
       - name: Upload the application and verification reports
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: DS4Windows-4.6.7-Korean-x64
           retention-days: 1
@@ -123,7 +155,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7.0.2
         with:
           name: DS4Windows-Korean-test-results
           retention-days: 1

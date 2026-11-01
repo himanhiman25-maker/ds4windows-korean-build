@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 
 UPSTREAM_COMMIT = '080495de61ae8b6ada6b4252337838e8b22119b8'
 ATTRS = ('Text','Content','Header','Title','ToolTip','Watermark','TextOn','TextOff','DisplayName')
-PREFIX = '{lex:Loc DS4Windows:Strings:'
+PREFIX = '{kui:UiText '
 XML_SPACE = '{http://www.w3.org/XML/1998/namespace}space'
 
 def add_resource(tree, key, value):
@@ -63,9 +63,9 @@ def main():
             return match.group('attr')+'="'+PREFIX+key+'}"'
         updated = pattern.sub(replace,original)
         if updated != original:
-            if 'xmlns:lex=' not in updated:
+            if 'xmlns:kui=' not in updated:
                 updated = re.sub(r'(<(?:\w+:)?\w+)\b',
-                    r'\1 xmlns:lex="http://wpflocalizeextension.codeplex.com"',updated,count=1)
+                    r'\1 xmlns:kui="clr-namespace:DS4WinWPF.Translations"',updated,count=1)
             ET.fromstring(updated)  # syntax, entities and namespace validation
             path.write_text(updated,encoding='utf-8',newline='\n')
 
@@ -134,6 +134,7 @@ internal static class KoreanUi
 }
 '''
     (app/'Translations'/'KoreanUi.cs').write_text(helper,encoding='utf-8',newline='\n')
+    shutil.copyfile(bundle/'support'/'UiTextExtension.cs',app/'Translations'/'UiTextExtension.cs')
     for tree,path in ((neutral,neutral_path),(korean,app/'Translations'/'Strings.ko.resx')):
         tree.write(path,encoding='utf-8',xml_declaration=True)
     shutil.copyfile(bundle/'data'/'Resources.ko.resx',app/'Properties'/'Resources.ko.resx')
@@ -145,7 +146,8 @@ internal static class KoreanUi
     shutil.copyfile(bundle/'support'/'LocalizedMarkup.cs',tests/'LocalizedMarkup.cs')
     for name in ('AppAudioSessionDiscoveryTests.cs','BindingWindowLiveInputLayoutTests.cs',
                  'FlickStickCalibrationLayoutTests.cs','ProfileMappingLiveInputTests.cs',
-                 'Switch2ProfileSectionLayoutTests.cs','XboxImpulseProfileSettingsTests.cs'):
+                 'Switch2ProfileSectionLayoutTests.cs','XboxImpulseProfileSettingsTests.cs',
+                 'LogViewVirtualizationTests.cs'):
         path=tests/name
         text=path.read_text(encoding='utf-8-sig')
         text=text.replace('System.Xml.Linq.XDocument.Load(', 'LocalizedMarkup.Load(')

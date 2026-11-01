@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 
 source=Path(sys.argv[1]).resolve()
 report=json.loads((source/'korean-localization-report.json').read_text(encoding='utf-8'))
-prefix='{lex:Loc DS4Windows:Strings:'
+prefix='{kui:UiText '
 neutral=ET.parse(source/'DS4Windows'/'Translations'/'Strings.resx')
 values={e.get('name'):e.findtext('value','') for e in neutral.findall('data')}
 total=0
@@ -37,7 +37,7 @@ for relative in report['changed_xaml']:
             if actual.startswith(prefix) and actual.endswith('}'):
                 resource_key=actual[len(prefix):-1]
                 assert values[resource_key]==expected,(relative,key,expected)
-            elif key=='Text' and 'StringFormat={lex:Loc DS4Windows:Strings:' in actual:
+            elif key=='Text' and 'StringFormat={kui:UiText ' in actual:
                 # Only the two reviewed display formats are permitted.
                 assert (relative.endswith('MainWindow.xaml') and 'Path=Items.Count' in expected) or (
                     relative.endswith('BridgeShellStyles.xaml') and 'SelectedProfile' in expected)
@@ -60,7 +60,8 @@ relative='DS4Windows/DS4Forms/ViewModels/LanguagePackViewModel.cs'
 assert (source/relative).read_text(encoding='utf-8-sig').replace('                    Global.Save();','                    //Global.Save();')==original_text(relative)
 for name in ('AppAudioSessionDiscoveryTests.cs','BindingWindowLiveInputLayoutTests.cs',
              'FlickStickCalibrationLayoutTests.cs','ProfileMappingLiveInputTests.cs',
-             'Switch2ProfileSectionLayoutTests.cs','XboxImpulseProfileSettingsTests.cs'):
+             'Switch2ProfileSectionLayoutTests.cs','XboxImpulseProfileSettingsTests.cs',
+             'LogViewVirtualizationTests.cs'):
     relative='DS4WindowsTests/'+name
     before=original_text(relative)
     expected=before.replace('System.Xml.Linq.XDocument.Load(', 'LocalizedMarkup.Load(').replace('XDocument.Load(', 'LocalizedMarkup.Load(')

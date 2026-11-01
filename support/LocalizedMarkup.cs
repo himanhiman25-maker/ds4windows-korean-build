@@ -12,7 +12,7 @@ internal static class LocalizedMarkup
     internal static XDocument Load(string path)
     {
         XDocument document = XDocument.Load(path);
-        const string prefix = "{lex:Loc DS4Windows:Strings:";
+        const string prefix = "{kui:UiText ";
         var attributes = document.Descendants().Attributes()
             .Where(a => a.Value.StartsWith(prefix, StringComparison.Ordinal) &&
                         a.Value.EndsWith("}", StringComparison.Ordinal)).ToArray();

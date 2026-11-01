@@ -4,6 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Resources;
 using System.Xml.Linq;
+using System.Threading;
+using System.Windows.Controls;
+using System.Windows.Markup;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DS4WindowsTests;
@@ -11,6 +14,39 @@ namespace DS4WindowsTests;
 [TestClass]
 public sealed class KoreanResourceTests
 {
+    [TestMethod]
+    public void NewUiTextCanRenderOnIndependentStaThreadsInBothLanguages()
+    {
+        // Guard against localization waiting on a previous thread's dispatcher.
+        // Exercise two fresh, sequential STA lifetimes instead.
+        foreach (string culture in new[] { "ko-KR", "en" })
+        {
+            Exception failure = null;
+            var thread = new Thread(() =>
+            {
+                try
+                {
+                    CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+                    // Use the production key selected for the Overview label.
+                    var key = "CloudUi_" + Convert.ToHexString(
+                        System.Security.Cryptography.SHA256.HashData(
+                            System.Text.Encoding.UTF8.GetBytes("Overview")))
+                        .Substring(0, 16).ToLowerInvariant();
+                    var markup = "<TextBlock xmlns=\"http://schemas.microsoft.com/winfx/2006/xaml/presentation\" " +
+                        "xmlns:kui=\"clr-namespace:DS4WinWPF.Translations;assembly=DS4Windows\" " +
+                        "Text=\"{kui:UiText " + key + "}\" />";
+                    var control = (TextBlock)XamlReader.Parse(markup);
+                    Assert.AreEqual(culture == "ko-KR" ? "개요" : "Overview", control.Text);
+                }
+                catch (Exception ex) { failure = ex; }
+            }) { IsBackground = true };
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            Assert.IsTrue(thread.Join(TimeSpan.FromSeconds(10)), "Text rendering must not wait on a dead dispatcher.");
+            if (failure != null) Assert.Fail(failure.ToString());
+        }
+    }
+
     [TestMethod]
     public void KoreanAndRegionalFallbackLoadEveryTranslatedString()
     {
