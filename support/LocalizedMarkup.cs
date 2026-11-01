@@ -12,6 +12,12 @@ internal static class LocalizedMarkup
     internal static XDocument Load(string path)
     {
         XDocument document = XDocument.Load(path);
+        // Neutralize only the read-only display converter for pre-existing
+        // markup assertions. Production converter behavior has dedicated tests.
+        foreach (var attribute in document.Descendants().Attributes())
+        {
+            attribute.Value = attribute.Value.Replace(", Converter={kui:KoreanDisplay}", "");
+        }
         const string prefix = "{kui:UiText ";
         var attributes = document.Descendants().Attributes()
             .Where(a => a.Value.StartsWith(prefix, StringComparison.Ordinal) &&

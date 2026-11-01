@@ -3,7 +3,7 @@ name: Build DS4Windows 4.6.7 Korean
 on:
   workflow_dispatch:
   push:
-    branches: [fix/korean-ui-threading]
+    branches: [feature/complete-korean-ui]
 
 permissions:
   contents: read
@@ -52,7 +52,7 @@ jobs:
       DOTNET_CLI_TELEMETRY_OPTOUT: '1'
       DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
       PYTHONUTF8: '1'
-      BUILD_LABEL: VIIPERRC4.6.7-ko.2
+      BUILD_LABEL: VIIPERRC4.6.7-ko.3
     steps:
       - name: Check out Korean overlay
         uses: actions/checkout@v7.0.1

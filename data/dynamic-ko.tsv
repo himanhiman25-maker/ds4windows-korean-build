@@ -1,0 +1,309 @@
+Disconnect Menu	연결 해제 메뉴
+Disconnect Controller	컨트롤러 연결 해제
+Disconnect Controller {0}	컨트롤러 {0} 연결 해제
+Controller {0}	컨트롤러 {0}
+Open	열기
+Minimize	최소화
+Open Program Folder	프로그램 폴더 열기
+Exit	종료
+Start	시작
+Stop	중지
+No physical controller selected	선택한 실제 컨트롤러 없음
+Left Trigger	왼쪽 트리거
+Right Trigger	오른쪽 트리거
+Shape the {0} trigger feel	{0} 트리거의 저항감을 조절합니다
+Active	작동 중
+Armed	작동 대기
+Feedback	저항
+Weapon	방아쇠
+Vibration	진동
+Wall	저항 지점
+Force	강도
+END OF TRAVEL	최대 입력 지점
+Full-pull action	끝까지 당겼을 때의 동작
+Assigned action	할당한 동작
+Unassigned	할당 안 됨
+Change  ›	변경  ›
+Behavior	동작 방식
+Delay	지연
+Off	끔
+On	켬
+Add at full pull	끝까지 당기면 추가 실행
+Replace at full pull	끝까지 당기면 대체 실행
+Hair trigger	헤어 트리거
+Hip fire	힙 파이어
+Hip fire (exclusive)	힙 파이어(단일 동작)
+Only the regular trigger action runs.	일반 트리거 동작만 실행합니다.
+Keep the regular trigger action active and also run the full-pull action at the end of travel.	일반 트리거 동작을 유지하면서 끝까지 당겼을 때의 동작도 함께 실행합니다.
+Release the regular trigger action and replace it with the full-pull action at the end of travel.	끝까지 당기면 일반 트리거 동작을 해제하고 최대 입력 동작으로 대체합니다.
+Run both actions at full pull, then release both as soon as the trigger backs away from the end stop.	끝까지 당기면 두 동작을 함께 실행하고, 최대 입력 지점에서 조금이라도 놓으면 두 동작을 모두 해제합니다.
+Wait for the chosen delay, then run the regular or full-pull action based on how far the trigger was pressed.	설정한 지연 시간 후 트리거를 당긴 정도에 따라 일반 동작이나 최대 입력 동작을 실행합니다.
+Wait for the chosen delay and run only one action: regular pull or full pull.	설정한 지연 시간 후 일반 입력과 최대 입력 중 한 동작만 실행합니다.
+Save new trigger profile	새 트리거 프로필 저장
+Rename trigger profile	트리거 프로필 이름 바꾸기
+Delete trigger profile	트리거 프로필 삭제
+Save trigger profile	트리거 프로필 저장
+Select a controller or profile to open Trigger Lab.	트리거 연구소를 열려면 컨트롤러나 프로필을 선택하세요.
+Select a controller or profile	컨트롤러나 프로필을 선택하세요
+Saved custom effect.	저장한 사용자 지정 효과입니다.
+Balanced Weapon	균형 잡힌 방아쇠
+A clean, medium travel weapon break.	중간 지점에서 저항이 뚜렷하게 풀리는 방아쇠 효과입니다.
+Soft Resistance	부드러운 저항
+Gentle resistance through most of the trigger travel.	트리거를 당기는 대부분의 구간에 부드러운 저항을 줍니다.
+Firm Resistance	강한 저항
+A heavier continuous pull for brakes and throttles.	브레이크와 가속 페달에 어울리는 강한 저항을 연속해서 줍니다.
+Hair Trigger	짧은 방아쇠
+A short pull with an early, light break.	살짝 당긴 지점에서 가볍게 저항이 풀리는 짧은 방아쇠 효과입니다.
+Pistol Break	권총 방아쇠
+A defined mid-travel wall with a strong click.	중간 지점에서 뚜렷한 저항과 강한 클릭감을 줍니다.
+Rifle Break	소총 방아쇠
+A later, heavier break suited to rifles.	깊이 당긴 지점에서 강한 저항이 풀리는 소총용 효과입니다.
+Machine Gun	기관총
+Fast, strong vibration after the initial take-up.	처음 당기는 유격 구간을 지나면 빠르고 강한 진동을 줍니다.
+Road Texture	노면 질감
+A lower-frequency vibration for terrain and engines.	노면과 엔진의 질감에 어울리는 낮은 주파수의 진동입니다.
+Game rumble vibration	게임 진동 전달
+Stream the game's {0} HID rumble motor to {1} as a low-latency vibration effect.	게임의 {0} HID 진동 모터 출력을 {1}에 지연이 적은 진동 효과로 전달합니다.
+heavy / left	강한 진동 / 왼쪽
+light / right	약한 진동 / 오른쪽
+Independently enable game-rumble vibration for {0}. This does not link the other trigger.	{0}의 게임 진동 전달을 개별로 켭니다. 반대쪽 트리거와 연동하지 않습니다.
+Stream game rumble to {0}	게임 진동을 {0}에 전달
+When {0} is pressed completely, run the action below using the selected behavior.	{0}를 끝까지 당기면 선택한 방식으로 아래 동작을 실행합니다.
+Change {0} full-pull action	{0} 최대 입력 동작 변경
+{0} full-pull behavior	{0} 최대 입력 동작 방식
+{0} hip-fire delay	{0} 힙 파이어 지연
+Choose what happens when {0} reaches full travel.	{0}를 끝까지 당겼을 때 실행할 동작을 선택하세요.
+Enable or disable this effect for {0} only.	{0}의 효과만 개별로 켜거나 끕니다.
+This {0} choice is saved, but Trigger Lab is globally paused.	{0} 설정은 저장되어 있지만 트리거 연구소의 전체 작동이 일시 중지되어 있습니다.
+▶  Preview	▶  미리보기
+↻  Reset {0}	↻  {0} 초기화
+Delete {0}?	{0}을(를) 삭제할까요?
+Trigger Lab is paused. Choose an effect and arm L2 or R2, then turn Enabled on.	트리거 연구소가 일시 중지되어 있습니다. 효과를 선택하고 L2 또는 R2를 작동 대기로 설정한 뒤 사용을 켜세요.
+Trigger Lab is paused. {0} {1} armed and will resume when Enabled is turned on.	트리거 연구소가 일시 중지되어 있습니다. {0}가 작동 대기 중이며 사용을 켜면 다시 작동합니다.{1}
+Armed effects are saved per trigger and do not override the game while paused.	작동 대기 효과는 트리거별로 저장되며, 일시 중지 중에는 게임의 효과를 덮어쓰지 않습니다.
+Made with Trigger Lab - {0} overrides incoming game trigger effects.	트리거 연구소 효과 사용 중 — {0}가 게임에서 보내는 트리거 효과를 덮어씁니다.
+Game rumble is streaming to {0} as trigger vibration.	게임 진동을 {0}의 트리거 진동으로 전달하고 있습니다.
+Trigger Lab is enabled. Arm L2 or R2 to persist an effect in this profile.	트리거 연구소가 켜져 있습니다. L2 또는 R2를 작동 대기로 설정하면 이 프로필에 효과를 유지합니다.
+L2 and R2	L2와 R2
+are	
+is	
+System audio · default output	시스템 오디오 · 기본 출력
+Controller audio	컨트롤러 오디오
+Selected app	선택한 앱
+Automatic game detection	게임 자동 감지
+Mix adds audio-driven detail while preserving game-provided advanced haptics.	게임에서 제공하는 고급 햅틱을 유지하면서 오디오 기반 피드백을 더합니다.
+Replace uses only the selected audio for vibration. Choose Mix to keep game vibrations too.	선택한 오디오만 진동에 사용합니다. 게임 진동도 유지하려면 혼합을 선택하세요.
+Replace ignores game-provided advanced haptics and uses only the selected audio source.	게임에서 제공하는 고급 햅틱을 사용하지 않고 선택한 오디오 소스만 사용합니다.
+Select a controller	컨트롤러를 선택하세요
+No source	소스 없음
+Saved to profile	프로필에 저장됨
+Waiting for audio	오디오 대기 중
+Waiting for game audio	게임 오디오 대기 중
+No active game audio session	활성 게임 오디오 세션 없음
+Audio capture is starting	오디오 캡처 시작 중
+Audio capture unavailable	오디오 캡처 사용 불가
+Bluetooth discovery is stopped. Use DS4Windows' Stop/Start controls to start discovery.	Bluetooth 검색이 중지되어 있습니다. DS4Windows를 중지한 뒤 시작하면 검색을 시작합니다.
+Starting Bluetooth discovery. Refresh in a moment to check its status.	Bluetooth 검색을 시작하고 있습니다. 잠시 후 새로 고침하여 상태를 확인하세요.
+Bluetooth discovery is active. {0} controller{1} available to associate or reconnect.	Bluetooth 검색 중입니다. 등록하거나 다시 연결할 수 있는 컨트롤러가 {0}개 있습니다.{1}
+Bluetooth discovery is active. No new controllers found yet. Wake an associated controller to reconnect; use sync mode only to associate a new controller, then refresh.	Bluetooth 검색 중입니다. 아직 새 컨트롤러를 찾지 못했습니다. 등록한 컨트롤러를 깨우면 다시 연결됩니다. 새 컨트롤러를 등록할 때만 동기화 모드로 전환한 뒤 새로 고침하세요.
+Windows did not provide a usable Bluetooth adapter. Check that Bluetooth is available and turned on, then stop and start DS4Windows to retry discovery.	사용 가능한 Bluetooth 어댑터를 찾지 못했습니다. Bluetooth를 사용할 수 있고 켜져 있는지 확인한 뒤 DS4Windows를 중지하고 시작하여 다시 검색하세요.
+Bluetooth discovery could not start{0}. Stop and start DS4Windows to retry; check the log if it fails again.	Bluetooth 검색을 시작하지 못했습니다{0}. DS4Windows를 중지하고 시작하여 다시 시도하세요. 계속 실패하면 로그를 확인하세요.
+Bluetooth discovery stopped unexpectedly. Stop and start DS4Windows to retry discovery.	Bluetooth 검색이 예기치 않게 중지되었습니다. DS4Windows를 중지하고 시작하여 다시 검색하세요.
+Bluetooth discovery is still cleaning up. Wait a moment, then retry Stop before starting or associating another controller.	Bluetooth 검색을 정리하고 있습니다. 잠시 기다린 뒤 중지를 다시 누르고, 그 후 시작하거나 다른 컨트롤러를 등록하세요.
+Bluetooth cleanup did not complete safely. Discovery cannot restart yet. Check the log; do not launch a second instance to bypass cleanup.	Bluetooth 정리를 안전하게 마치지 못해 아직 검색을 다시 시작할 수 없습니다. 로그를 확인하세요. 정리를 건너뛰기 위해 앱을 중복 실행하지 마세요.
+Bluetooth discovery status is unavailable. Refresh to check again.	Bluetooth 검색 상태를 확인할 수 없습니다. 새로 고침하여 다시 확인하세요.
+Reconnect selected	선택한 장치 다시 연결
+Associate selected	선택한 장치 등록
+Controller reconnected. Its existing association was preserved. Joy-Con halves may still need a pair selection.	컨트롤러를 다시 연결했습니다. 기존 등록 정보는 유지됩니다. Joy-Con 양쪽을 결합할 쌍으로 선택해야 할 수 있습니다.
+The controller was reached, but its controller slot could not activate. Its association was preserved. Check the log, then wake it and retry after cleanup completes.	컨트롤러에 연결했지만 슬롯을 활성화하지 못했습니다. 등록 정보는 유지됩니다. 로그를 확인하고 정리가 끝난 뒤 컨트롤러를 깨워 다시 시도하세요.
+Reconnect failed: {0}. Its association was not changed. Wake it and refresh after cleanup completes; check the log if it remains unavailable.	다시 연결하지 못했습니다: {0}. 등록 정보는 변경되지 않았습니다. 정리가 끝난 뒤 컨트롤러를 깨우고 새로 고침하세요. 계속 사용할 수 없으면 로그를 확인하세요.
+{0} left and {1} right unmatched Joy-Con 2 connection{2} available.	결합 가능한 미결합 Joy-Con 2: 왼쪽 {0}개, 오른쪽 {1}개.{2}
+VIIPER ready	VIIPER 준비 완료
+VIIPER ready; startup task needs repair	VIIPER 준비 완료 · 시작 작업 복구 필요
+VIIPER is ready to use. Automatic startup could not be checked; restart DS4Windows to try again	VIIPER를 사용할 수 있습니다. 자동 시작을 확인하지 못했습니다. DS4Windows를 다시 시작하여 확인하세요
+VIIPER startup blocked by another viiper.exe	다른 viiper.exe 때문에 VIIPER 시작이 차단됨
+VIIPER and usbip-win2 need setup	VIIPER 및 usbip-win2 설정 필요
+usbip-win2 0.9.7.7 is missing	usbip-win2 0.9.7.7이 설치되지 않음
+usbip-win2 {0} must be replaced with supported 0.9.7.7	usbip-win2 {0}을(를) 지원 버전 0.9.7.7로 교체해야 함
+usbip-win2 executable verification failed	usbip-win2 실행 파일 검증 실패
+usbip-win2 driver repair required	usbip-win2 드라이버 복구 필요
+usbip-win2 reboot or repair required	usbip-win2 적용을 위한 재부팅 또는 복구 필요
+VIIPER helper missing	VIIPER 도우미가 설치되지 않음
+packaged VIIPER update required	포함된 VIIPER 패키지로 업데이트 필요
+VIIPER elevated startup task needs repair	VIIPER 관리자 권한 시작 작업 복구 필요
+VIIPER status unknown	VIIPER 상태 알 수 없음
+VIIPER server not running	VIIPER 서버가 실행되지 않음
+{0}. VIIPER helper: {1}; usbip-win2: {2}; server: {3}.	{0}. VIIPER 도우미: {1} · usbip-win2: {2} · 서버: {3}.
+installed	설치됨
+missing	미설치
+running	실행 중
+not running	중지됨
+Citrix USB Monitor must be disabled before VIIPER can start safely	VIIPER를 안전하게 시작하려면 Citrix USB Monitor를 비활성화해야 함
+Tilt to move the mouse. Use this for precise aim in games that accept mouse input alongside a controller.	컨트롤러를 기울여 마우스를 움직입니다. 컨트롤러와 마우스를 함께 사용할 수 있는 게임에서 정밀 조준에 사용하세요.
+Tilt to move the virtual aiming stick. Use this when a game only accepts controller aiming.	컨트롤러를 기울여 가상 조준 스틱을 움직입니다. 컨트롤러 조준만 지원하는 게임에서 사용하세요.
+Quick tilts trigger actions you assign in Gyro settings. This does not move the mouse.	빠르게 기울이면 자이로 설정에서 지정한 동작을 실행합니다. 마우스는 움직이지 않습니다.
+Let a compatible game or emulator use your motion directly. The game decides what it does.	호환 게임이나 에뮬레이터에 모션 입력을 직접 전달합니다. 입력의 용도는 게임에서 결정합니다.
+Tilts use your button mappings. To move the mouse by tilting, choose Mouse pointer above.	기울기 입력에 버튼 매핑을 사용합니다. 기울여서 마우스를 움직이려면 위에서 마우스 포인터를 선택하세요.
+Always On	항상 켬
+Xbox 360 output provides standard XInput-style buttons, sticks, triggers, and rumble.	Xbox 360 출력은 표준 XInput 방식의 버튼, 스틱, 트리거 및 진동을 제공합니다.
+PlayStation controller audio	PlayStation 컨트롤러 오디오
+Speaker and microphone settings for compatible PlayStation controllers.	호환 PlayStation 컨트롤러의 스피커와 마이크를 설정합니다.
+Enable controller microphone input	컨트롤러 마이크 입력 사용
+Enable headset microphone input	헤드셋 마이크 입력 사용
+These settings will activate when the profile is used with a compatible PlayStation controller.	호환 PlayStation 컨트롤러에 이 프로필을 사용하면 설정이 활성화됩니다.
+These settings become active when the profile is used with a compatible PlayStation controller.	호환 PlayStation 컨트롤러에 이 프로필을 사용하면 설정이 활성화됩니다.
+Controller microphone routing requires a genuine Sony DualShock 4 or DualSense.	컨트롤러 마이크를 연결하려면 Sony 정품 DualShock 4 또는 DualSense가 필요합니다.
+USB DualSense microphone routing uses the capture and virtual-output endpoints in Advanced audio.	USB DualSense 마이크 연결에는 고급 오디오의 캡처 및 가상 출력 장치를 사용합니다.
+Direct controller microphone input requires a Bluetooth DualShock 4 or DualSense.	컨트롤러의 직접 마이크 입력에는 Bluetooth로 연결한 DualShock 4 또는 DualSense가 필요합니다.
+A VIIPER PlayStation audio interface is required to expose the controller microphone.	컨트롤러 마이크를 사용하려면 VIIPER PlayStation 오디오 인터페이스가 필요합니다.
+The VIIPER microphone interface is starting. This control will become available automatically.	VIIPER 마이크 인터페이스를 시작하고 있습니다. 준비되면 이 설정을 자동으로 사용할 수 있습니다.
+Controller audio is not available on this device.	이 장치에서는 컨트롤러 오디오를 사용할 수 없습니다.
+Controller microphone input is not available on this device.	이 장치에서는 컨트롤러 마이크 입력을 사용할 수 없습니다.
+Controller audio is not available on DualShock 3.	DualShock 3에서는 컨트롤러 오디오를 사용할 수 없습니다.
+Controller microphone input is not available on DualShock 3.	DualShock 3에서는 컨트롤러 마이크 입력을 사용할 수 없습니다.
+Select a compatible PlayStation controller to use controller audio.	컨트롤러 오디오를 사용하려면 호환 PlayStation 컨트롤러를 선택하세요.
+Controller audio is available on compatible PlayStation controllers.	호환 PlayStation 컨트롤러에서 컨트롤러 오디오를 사용할 수 있습니다.
+Rumble strength	진동 강도
+Feedback strength	피드백 강도
+Haptic feedback strength	햅틱 피드백 강도
+HD rumble strength	HD 진동 강도
+DualShock 4 audio	DualShock 4 오디오
+DualSense audio	DualSense 오디오
+Bluetooth speaker output and headset-mic input through the controller's 3.5 mm jack.	Bluetooth 스피커 출력과 컨트롤러의 3.5mm 단자를 통한 헤드셋 마이크 입력입니다.
+DualShock 4 microphone input comes from a headset connected to the controller's 3.5 mm jack.	DualShock 4 마이크 입력은 컨트롤러의 3.5mm 단자에 연결한 헤드셋을 사용합니다.
+Speaker and microphone routing for the selected physical DualSense.	선택한 실제 DualSense의 스피커와 마이크 연결을 설정합니다.
+Uses the DualSense built-in microphone or a headset connected to the controller.	DualSense 내장 마이크 또는 컨트롤러에 연결한 헤드셋을 사용합니다.
+Max Light {0:N2}%	최대 밝기 {0:N2}%
+A Button	A 버튼
+B Button	B 버튼
+X Button	X 버튼
+Y Button	Y 버튼
+Up Button	위쪽 버튼
+Down Button	아래쪽 버튼
+Left Button	왼쪽 버튼
+Right Button	오른쪽 버튼
+Cross	십자(×)
+Circle	동그라미(○)
+Square	네모(□)
+Triangle	세모(△)
+Options	옵션
+Share	공유
+Up	위
+Down	아래
+Left	왼쪽
+Right	오른쪽
+Back	뒤로
+Mute	음소거
+Capture	캡처
+Touchpad Click	터치패드 누르기
+Touchpad Touch	터치패드 터치
+Touch Left	터치 왼쪽
+Touch Right	터치 오른쪽
+Touch Upper	터치 위쪽
+Touch Multi	터치 다중 입력
+Left Stick	왼쪽 스틱
+Right Stick	오른쪽 스틱
+Left Stick Up	왼쪽 스틱 위
+Left Stick Down	왼쪽 스틱 아래
+Left Stick Left	왼쪽 스틱 왼쪽
+Left Stick Right	왼쪽 스틱 오른쪽
+Right Stick Up	오른쪽 스틱 위
+Right Stick Down	오른쪽 스틱 아래
+Right Stick Left	오른쪽 스틱 왼쪽
+Right Stick Right	오른쪽 스틱 오른쪽
+L2 Full Pull	L2 최대 입력
+R2 Full Pull	R2 최대 입력
+DS4Windows version {0}	DS4Windows 버전 {0}
+DS4Windows Assembly Architecture: {0}	DS4Windows 앱 아키텍처: {0}
+OS Version: {0}	운영체제 버전: {0}
+OS Kernel Version: {0}	운영체제 커널 버전: {0}
+System Architecture: {0}	시스템 아키텍처: {0}
+Running as User	일반 사용자 권한으로 실행 중
+Running as Admin	관리자 권한으로 실행 중
+HidHide control device found	HidHide 제어 장치를 찾음
+VIIPER virtual-controller backend ready	VIIPER 가상 컨트롤러 백엔드 준비 완료
+Using output KB+M handler: {0}	키보드·마우스 출력 방식: {0}
+Some applications may block controller inputs. (Windows UAC Conflictions). Please go to {0} for more information and workarounds.	일부 앱에서 컨트롤러 입력이 차단될 수 있습니다(Windows UAC 권한 충돌). 자세한 설명과 해결 방법: {0}
+Switch 2 Bluetooth discovery active (generation {0}).	Switch 2 Bluetooth 검색 중(세대 {0}).
+[ProfileEditorTiming] {0}: phase={1}ms total={2}ms	[프로필 편집 시간] {0}: 단계={1}ms · 누적={2}ms
+workspace prepared	편집 공간 준비
+loading view rendered	불러오기 화면 표시
+profile loaded	프로필 불러오기
+editor shell constructed	편집기 화면 구성
+editor bindings refreshed	편집기 데이터 연결 갱신
+first frame rendered	첫 화면 표시
+Request App Shutdown	앱 종료 요청
+Disconnected	연결 해제됨
+No physical controller is assigned to this slot.	이 슬롯에 할당된 실제 컨트롤러가 없습니다.
+Select a compatible PlayStation controller to configure microphone input.	마이크 입력을 설정하려면 호환 PlayStation 컨트롤러를 선택하세요.
+s	
+Unlinking — keeping both Joy-Cons connected…	양쪽 Joy-Con의 연결을 유지하면서 결합을 해제하고 있습니다…
+Joy-Cons are now two separate controllers.	Joy-Con을 각각 별도의 컨트롤러로 분리했습니다.
+Could not finish unlinking. Check the controller list and log.	결합 해제를 마치지 못했습니다. 컨트롤러 목록과 로그를 확인하세요.
+Could not finish unlinking: {0}	결합 해제를 마치지 못했습니다: {0}
+{0} selected. Click an opposite-side Joy-Con to join them.	{0}을(를) 선택했습니다. 반대쪽 Joy-Con을 클릭하여 결합하세요.
+Pair selection cancelled.	결합할 쌍 선택을 취소했습니다.
+Choose one left and one right Joy-Con from the same generation.	같은 세대의 왼쪽 Joy-Con과 오른쪽 Joy-Con을 하나씩 선택하세요.
+That Joy-Con is no longer available.	해당 Joy-Con을 더 이상 사용할 수 없습니다.
+Joining and remembering the selected Joy-Con pair…	선택한 Joy-Con 쌍을 결합하고 기억하고 있습니다…
+Joy-Cons connected as one controller.	Joy-Con을 하나의 컨트롤러로 결합했습니다.
+The Joy-Con pair could not be joined. Check the controller list and log.	Joy-Con 쌍을 결합하지 못했습니다. 컨트롤러 목록과 로그를 확인하세요.
+Joy-Con pair could not be joined: {0}	Joy-Con 쌍을 결합하지 못했습니다: {0}
+Pairing the oldest compatible Joy-Con halves…	먼저 연결된 호환 Joy-Con 양쪽부터 결합하고 있습니다…
+Automatic pairing is on. Waiting for compatible left/right halves.	자동 결합이 켜져 있습니다. 호환되는 왼쪽·오른쪽 Joy-Con을 기다리고 있습니다.
+Automatically connected {0} Joy-Con pair{1}.	Joy-Con {0}쌍을 자동으로 결합했습니다.{1}
+Automatic pairing is on and will apply when compatible Joy-Con connections are available.	자동 결합이 켜져 있으며 호환 Joy-Con이 연결되면 적용됩니다.
+Automatic pairing is off. Use the link buttons on the Controllers tab to choose exact pairs.	자동 결합이 꺼져 있습니다. 컨트롤러 탭의 결합 버튼으로 원하는 쌍을 선택하세요.
+Automatic Joy-Con pairing could not be reconciled: {0}.	Joy-Con 자동 결합 상태를 정리하지 못했습니다: {0}.
+Association is unavailable until Bluetooth discovery is active.	Bluetooth 검색이 시작되어야 장치를 등록할 수 있습니다.
+Select a controller to associate or reconnect first.	먼저 등록하거나 다시 연결할 컨트롤러를 선택하세요.
+Reconnecting the selected controller without changing its association…	등록 정보를 유지하면서 선택한 컨트롤러를 다시 연결하고 있습니다…
+Associating {0}…	{0}을(를) 등록하고 있습니다…
+{0} associated. It will connect automatically when it resumes advertising.	{0}을(를) 등록했습니다. 컨트롤러가 다시 연결 신호를 보내면 자동으로 연결됩니다.
+Association failed at {0}: {1}.	장치 등록 실패 — 단계: {0}, 원인: {1}.
+{0} failed: {1}.	{0} 실패: {1}.
+Reconnect	다시 연결
+Association	장치 등록
+Automatic pairing is on; {0} left and {1} right half{2} are waiting for compatible partners.	자동 결합이 켜져 있습니다. 왼쪽 {0}개와 오른쪽 {1}개가 호환되는 반대쪽 Joy-Con을 기다리고 있습니다.{2}
+Select one left and one right Joy-Con 2 first.	먼저 왼쪽 Joy-Con 2와 오른쪽 Joy-Con 2를 하나씩 선택하세요.
+Joining the selected pair…	선택한 쌍을 결합하고 있습니다…
+Joy-Con 2 pair saved and connected as one controller.	Joy-Con 2 쌍을 저장하고 하나의 컨트롤러로 결합했습니다.
+Joy-Con 2 pair could not be joined: {0}.	Joy-Con 2 쌍을 결합하지 못했습니다: {0}.
+Select the Joy-Con 2 to use separately first.	먼저 별도로 사용할 Joy-Con 2를 선택하세요.
+Connecting {0} separately…	{0}을(를) 별도 컨트롤러로 연결하고 있습니다…
+{0} connected as a separate controller.	{0}을(를) 별도의 컨트롤러로 연결했습니다.
+{0} could not connect separately: {1}.	{0}을(를) 별도로 연결하지 못했습니다: {1}.
+{0} — already associated; reconnect available	{0} — 이미 등록됨 · 다시 연결 가능
+Joy-Con 2 (Left)	Joy-Con 2(왼쪽)
+Joy-Con 2 (Right)	Joy-Con 2(오른쪽)
+Joy-Con 2 (Left) #{0}	Joy-Con 2(왼쪽) #{0}
+Joy-Con 2 (Right) #{0}	Joy-Con 2(오른쪽) #{0}
+Switch 2 layout: Cross -> B, Circle -> A, Square -> Y, Triangle -> X, Share -> Minus, Options -> Plus, PS -> Home, Capture -> Capture.	Switch 2 버튼 배치: × → B, ○ → A, □ → Y, △ → X, Share → −, Options → +, PS → HOME, Capture → 캡처.
+DualSense output supports touch, motion, rumble, advanced haptics, adaptive triggers, and controller lighting. Available effects depend on your game and physical controller.	DualSense 출력은 터치, 모션, 진동, 고급 햅틱, 적응형 트리거와 컨트롤러 조명을 지원합니다. 사용할 수 있는 효과는 게임과 실제 컨트롤러에 따라 다릅니다.
+DualSense Edge output adds Fn buttons and back paddles alongside DualSense feedback. Available effects depend on your game and physical controller. Onboard profile editing is not supported on the virtual controller.	DualSense Edge 출력은 DualSense 피드백에 Fn 버튼과 후면 패들을 추가합니다. 사용할 수 있는 효과는 게임과 실제 컨트롤러에 따라 다릅니다. 가상 컨트롤러에서는 내장 프로필 편집을 지원하지 않습니다.
+DualShock 4 output provides DS4 buttons, touch, gyro, rumble, lightbar, and flash feedback.	DualShock 4 출력은 DS4 버튼, 터치, 자이로, 진동, 라이트바와 점멸 피드백을 제공합니다.
+Xbox One / Series output preserves Guide, Share, ten-bit triggers, and four independent feedback channels through VIIPER. Windows compatibility still requires an explicitly authorized USB identity.	Xbox One / Series 출력은 VIIPER를 통해 Guide, Share, 10비트 트리거와 독립된 피드백 채널 4개를 유지합니다. Windows에서 사용하려면 명시적으로 승인된 USB 식별 정보가 필요합니다.
+Click the lightbar for color picker	라이트바를 클릭하여 색상 선택
+Follows this Joy-Con's holding style.	이 Joy-Con을 잡는 방향에 맞춰 표시합니다.
+Audio Haptics is disabled.	오디오 햅틱이 꺼져 있습니다.
+Audio Haptics is starting.	오디오 햅틱을 시작하고 있습니다.
+Audio Haptics is active.	오디오 햅틱이 작동 중입니다.
+Audio capture stopped; reconnecting	오디오 캡처 중지됨 · 다시 연결 중
+Audio Haptics stopped: {0}. Turn Audio Haptics off and on to retry.	오디오 햅틱이 중지되었습니다: {0}. 오디오 햅틱을 껐다 켜서 다시 시도하세요.
+Waiting for the emulated controller audio endpoint	가상 컨트롤러 오디오 장치 대기 중
+Waiting for a game	게임 대기 중
+Starting Bluetooth haptics transport	Bluetooth 햅틱 전송 시작 중
+Waiting for audio source	오디오 소스 대기 중
+Waiting for a detected game	감지된 게임 대기 중
+Waiting for the selected application	선택한 앱 대기 중
+Waiting for the controller's HD rumble output	컨트롤러 HD 진동 출력 대기 중
+Waiting for audio source: {0}	오디오 소스 대기 중: {0}
+Recovering Bluetooth haptics transport	Bluetooth 햅틱 전송 복구 중
+Cancel this Joy-Con pairing selection	이 Joy-Con 쌍 선택 취소
+Select this Joy-Con for manual pairing	수동 결합할 Joy-Con으로 선택
+Selected — choose the other Joy-Con	선택됨 — 반대쪽 Joy-Con을 선택하세요
+Works on its own · Available to link	단독 사용 중 · 결합 가능
+Link	결합
+{0} is not available on {1}. The saved backend mapping is preserved.	{1}에서는 {0}을(를) 사용할 수 없습니다. 저장된 백엔드 매핑은 유지됩니다.
+{0} is fully remappable from this list.	이 목록에서 {0}의 매핑을 자유롭게 변경할 수 있습니다.
+Shift: 	전환 입력: 

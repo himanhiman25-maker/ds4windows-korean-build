@@ -5,6 +5,16 @@ import xml.etree.ElementTree as ET
 
 source=Path(sys.argv[1]).resolve()
 report=json.loads((source/'korean-localization-report.json').read_text(encoding='utf-8'))
+presentation_patches=json.loads((source/'korean-dynamic-patches.json').read_text(encoding='utf-8'))
+reviewed_text={}
+for patch in reversed(presentation_patches):
+    relative=patch['file']
+    assert relative.startswith('DS4Windows/DS4Forms/'),relative
+    current=reviewed_text.get(relative,(source/relative).read_text(encoding='utf-8-sig'))
+    assert current.count(patch['new'])==patch['count'],relative
+    reviewed_text[relative]=current.replace(patch['new'],patch['old'])
+def reviewed_read(relative):
+    return reviewed_text.get(relative,(source/relative).read_text(encoding='utf-8-sig'))
 prefix='{kui:UiText '
 neutral=ET.parse(source/'DS4Windows'/'Translations'/'Strings.resx')
 values={e.get('name'):e.findtext('value','') for e in neutral.findall('data')}
@@ -26,7 +36,7 @@ checked_nodes=0
 for relative in report['changed_xaml']:
     original=subprocess.check_output(['git','-C',str(source),'show',report['upstream_commit']+':'+relative])
     old=ET.fromstring(original)
-    new=ET.parse(source/relative).getroot()
+    new=ET.fromstring(reviewed_read(relative))
     old_nodes=list(old.iter()); new_nodes=list(new.iter())
     assert len(old_nodes)==len(new_nodes),relative
     for a,b in zip(old_nodes,new_nodes):
@@ -53,9 +63,14 @@ def original_text(relative):
     return subprocess.check_output(['git','-C',str(source),'show',report['upstream_commit']+':'+relative]).decode('utf-8-sig').replace('\r\n','\n')
 for relative in ('DS4Windows/DS4Forms/MainWindow.xaml.cs',
                  'DS4Windows/DS4Forms/ViewModels/MainWindowsViewModel.cs'):
-    modified=(source/relative).read_text(encoding='utf-8-sig')
+    modified=reviewed_read(relative)
     restored=re.sub(r'DS4WinWPF\.Translations\.KoreanUi\.Get\(("(?:\\.|[^"\\])*")\)',r'\1',modified)
     assert restored==original_text(relative),'Non-display C# changed: '+relative
+for relative,restored in reviewed_text.items():
+    if relative.endswith('.cs') and relative not in (
+            'DS4Windows/DS4Forms/MainWindow.xaml.cs',
+            'DS4Windows/DS4Forms/ViewModels/MainWindowsViewModel.cs'):
+        assert restored==original_text(relative),'Non-presentation C# changed: '+relative
 relative='DS4Windows/DS4Forms/ViewModels/LanguagePackViewModel.cs'
 assert (source/relative).read_text(encoding='utf-8-sig').replace('                    Global.Save();','                    //Global.Save();')==original_text(relative)
 for name in ('AppAudioSessionDiscoveryTests.cs','BindingWindowLiveInputLayoutTests.cs',

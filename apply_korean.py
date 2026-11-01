@@ -3,7 +3,7 @@
 No installed application, user profile, driver or registry is touched.
 """
 from pathlib import Path
-import argparse, collections, hashlib, html, json, re, shutil, subprocess
+import argparse, collections, hashlib, html, json, re, shutil, subprocess, sys
 import xml.etree.ElementTree as ET
 
 UPSTREAM_COMMIT = '080495de61ae8b6ada6b4252337838e8b22119b8'
@@ -27,6 +27,10 @@ def main():
     if subprocess.check_output(['git','-C',str(source),'status','--porcelain'],text=True).strip():
         raise SystemExit('Source checkout must be clean. Use a fresh pinned checkout.')
     mapping = json.loads((bundle/'data'/'ui-ko.json').read_text(encoding='utf-8'))
+    for line in (bundle/'data/dynamic-ko.tsv').read_text(encoding='utf-8').splitlines():
+        if '\t' in line:
+            english,translated=line.split('\t',1)
+            mapping[english]=translated
     if any(not isinstance(k,str) or not isinstance(v,str) for k,v in mapping.items()):
         raise SystemExit('Invalid translation mapping')
     app = source/'DS4Windows'
@@ -119,7 +123,7 @@ def main():
     helper='''using System.Collections.Generic;
 using System.Globalization;
 namespace DS4WinWPF.Translations;
-internal static class KoreanUi
+internal static partial class KoreanUi
 {
     private static readonly Dictionary<string, string> Keys = new()
     {
@@ -134,6 +138,9 @@ internal static class KoreanUi
 }
 '''
     (app/'Translations'/'KoreanUi.cs').write_text(helper,encoding='utf-8',newline='\n')
+    sys.path.insert(0,str(bundle/'support'))
+    from apply_dynamic import apply as apply_dynamic
+    dynamic_patch_count=apply_dynamic(source,bundle)
     shutil.copyfile(bundle/'support'/'UiTextExtension.cs',app/'Translations'/'UiTextExtension.cs')
     for tree,path in ((neutral,neutral_path),(korean,app/'Translations'/'Strings.ko.resx')):
         tree.write(path,encoding='utf-8',xml_declaration=True)
@@ -154,10 +161,12 @@ internal static class KoreanUi
         text=text.replace('XDocument.Load(', 'LocalizedMarkup.Load(')
         path.write_text(text,encoding='utf-8',newline='\n')
     shutil.copyfile(bundle/'support'/'KoreanResourceTests.cs',tests/'KoreanResourceTests.cs')
+    shutil.copyfile(bundle/'support'/'KoreanPresentationTests.cs',tests/'KoreanPresentationTests.cs')
     report={'upstream_commit':head,'ui_strings_available':len(keys),
             'xaml_attribute_replacements':sum(changed.values()),'changed_xaml':dict(changed),
             'resource_keys':keys,'substitutions':substitutions,
-            'known_limit':'Dynamic diagnostics, runtime-generated choices and third-party UI may still contain English. Windows build and interactive acceptance are required.'}
+            'dynamic_presentation_patches':dynamic_patch_count,
+            'known_limit':'External errors, third-party text and user-created names retain their original identifiers. Physical-controller acceptance remains required.'}
     (source/'korean-localization-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print(json.dumps({k:v for k,v in report.items() if k not in ('resource_keys','substitutions')},ensure_ascii=False,indent=2))
 
