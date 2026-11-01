@@ -120,6 +120,13 @@ def apply(source, bundle):
         'physicalControlName ?? mapped.ControlName',CALL+'(physicalControlName ?? mapped.ControlName)')
     replace('DS4Windows/DS4Forms/MainWindow.xaml.cs','Label = label;','Label = '+CALL+'(label);')
     replace('DS4Windows/DS4Forms/MainWindow.xaml.cs','Label = candidate.Label;','Label = '+CALL+'(candidate.Label);')
+    # Joy-Con row captions are display metadata, never association identities.
+    relative='DS4Windows/DS4Forms/MainWindow.xaml.cs'
+    text=(source/relative).read_text(encoding='utf-8')
+    for old in ('isArmed ?\n                    "Cancel this Joy-Con pairing selection" :\n                    "Select this Joy-Con for manual pairing"',
+                'IsArmed ? "Cancel" : "Link"',
+                'IsArmed ? "Selected — choose the other Joy-Con" : "Works on its own · Available to link"'):
+        replace(relative,old,CALL+'('+old+')')
     # Built-in preset names are translated in the UI; custom names remain raw.
     a='DS4Windows/DS4Forms/AudioHapticsControl.xaml.cs'
     replace(a,'public string DisplayName { get; init; }','public string DisplayName { get; init; }\n            public string LocalizedDisplayName => '+CALL+'(DisplayName);')
@@ -144,6 +151,8 @@ def apply(source, bundle):
             replace(relative,old,old[:-1]+', Converter={kui:KoreanDisplay}}')
     p='DS4Windows/DS4Forms/ProfileEditor.xaml'
     replace(p,'{Binding ActionName}','{Binding LocalizedActionName}')
+    replace(p,'{Binding PhysicalControllerAvailabilityHint}',
+        '{Binding PhysicalControllerAvailabilityHint, Converter={kui:KoreanDisplay}}',required=False)
     replace(p,'StringFormat=Max Light {0:N2}%',
         "StringFormat={kui:UiText CloudUi_"+__import__('hashlib').sha256(b'Max Light {0:N2}%').hexdigest()[:16]+'}')
     replace('DS4Windows/DS4Forms/AudioHapticsControl.xaml','DisplayMemberPath="DisplayName"','DisplayMemberPath="LocalizedDisplayName"')

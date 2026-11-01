@@ -17,7 +17,7 @@ Armed	작동 대기
 Feedback	저항
 Weapon	방아쇠
 Vibration	진동
-Wall	저항 지점
+Wall	저항점
 Force	강도
 END OF TRAVEL	최대 입력 지점
 Full-pull action	끝까지 당겼을 때의 동작
@@ -307,3 +307,104 @@ Link	결합
 {0} is not available on {1}. The saved backend mapping is preserved.	{1}에서는 {0}을(를) 사용할 수 없습니다. 저장된 백엔드 매핑은 유지됩니다.
 {0} is fully remappable from this list.	이 목록에서 {0}의 매핑을 자유롭게 변경할 수 있습니다.
 Shift: 	전환 입력: 
+No fallback app selected	대체 앱을 선택하지 않음
+{0}  ·  App	{0}  ·  앱
+{0}  ·  Unavailable	{0}  ·  사용 불가
+Capture stopped: {0}	캡처 중지됨: {0}
+Side L	측면 L
+Side R	측면 R
+Left Touch	왼쪽 터치
+Right Touch	오른쪽 터치
+Upper Touch	위쪽 터치
+Multitouch	다중 터치
+LS Up	왼쪽 스틱 위
+LS Down	왼쪽 스틱 아래
+LS Left	왼쪽 스틱 왼쪽
+LS Right	왼쪽 스틱 오른쪽
+RS Up	오른쪽 스틱 위
+RS Down	오른쪽 스틱 아래
+RS Left	오른쪽 스틱 왼쪽
+RS Right	오른쪽 스틱 오른쪽
+Tilt Up	위로 기울이기
+Tilt Down	아래로 기울이기
+Tilt Left	왼쪽으로 기울이기
+Tilt Right	오른쪽으로 기울이기
+Swipe Up	위로 밀기
+Swipe Down	아래로 밀기
+Swipe Left	왼쪽으로 밀기
+Swipe Right	오른쪽으로 밀기
+Function Left	왼쪽 기능 버튼
+Function Right	오른쪽 기능 버튼
+Bottom Left Paddle	왼쪽 후면 패들
+Bottom Right Paddle	오른쪽 후면 패들
+GL (Rear Left)	GL(왼쪽 후면)
+GR (Rear Right)	GR(오른쪽 후면)
+Switch 2 Joy-Con Left Paddle 1	Switch 2 Joy-Con 왼쪽 패들 1
+Switch 2 Joy-Con Left Paddle 2	Switch 2 Joy-Con 왼쪽 패들 2
+Switch 2 Joy-Con Right Paddle 1	Switch 2 Joy-Con 오른쪽 패들 1
+Switch 2 Joy-Con Right Paddle 2	Switch 2 Joy-Con 오른쪽 패들 2
+Switch 2 Joy-Con Left IR Sensor	Switch 2 Joy-Con 왼쪽 IR 센서
+Switch 2 Joy-Con Right IR Sensor	Switch 2 Joy-Con 오른쪽 IR 센서
+Left X-Axis-	왼쪽 X축−
+Left X-Axis+	왼쪽 X축+
+Left Y-Axis-	왼쪽 Y축−
+Left Y-Axis+	왼쪽 Y축+
+Right X-Axis-	오른쪽 X축−
+Right X-Axis+	오른쪽 X축+
+Right Y-Axis-	오른쪽 Y축−
+Right Y-Axis+	오른쪽 Y축+
+Dpad Up	십자키 위
+Dpad Down	십자키 아래
+Dpad Left	십자키 왼쪽
+Dpad Right	십자키 오른쪽
+LS Outer	왼쪽 스틱 바깥 영역
+RS Outer	오른쪽 스틱 바깥 영역
+Gyro Swipe Up	자이로 위로 밀기
+Gyro Swipe Down	자이로 아래로 밀기
+Gyro Swipe Left	자이로 왼쪽으로 밀기
+Gyro Swipe Right	자이로 오른쪽으로 밀기
+Gyro X+	자이로 X+
+Gyro X-	자이로 X−
+Gyro Z+	자이로 Z+
+Gyro Z-	자이로 Z−
+Applying game mod settings…	게임 모드 설정 적용 중…
+Off — game mods cannot change your controller.	끔 — 게임 모드에서 컨트롤러 설정을 변경할 수 없습니다.
+Enabled — press Start in DS4Windows to accept game mods.	사용 중 — DS4Windows에서 시작을 누르면 게임 모드의 입력을 받습니다.
+Not listening — open Connection details and choose Apply / Retry.	수신하지 않음 — 연결 세부 정보를 열고 적용 / 다시 시도를 선택하세요.
+Listening on {0}. Connect a DualSense or DualSense Edge for mod effects.	{0}에서 수신 중입니다. 모드 효과를 사용하려면 DualSense 또는 DualSense Edge를 연결하세요.
+Start magnetometer calibration	자력계 보정 시작
+Complete magnetometer calibration	자력계 보정 완료
+Collecting: rotate the controller through a broad figure-eight in every orientation, then click Complete.	측정 중: 컨트롤러를 여러 방향으로 넓게 8자 모양으로 돌린 뒤 완료를 누르세요.
+Calibration cancelled; ordinary controller output is active and the previous calibration was preserved.	보정을 취소했습니다. 일반 컨트롤러 출력이 작동하며 이전 보정은 유지됩니다.
+Adopted {0} for {1}: {2} samples, {3}/8 octants, RMS {4}, P95 {5}.	{1}에 {0} 보정을 적용했습니다: 표본 {2}개, 8방향 중 {3}방향, RMS {4}, P95 {5}.
+full ellipsoid	전체 타원체
+diagonal min/max fallback	대각 최솟값·최댓값 대체 방식
+controller	컨트롤러
+right Joy-Con	오른쪽 Joy-Con
+Left Bumper	왼쪽 범퍼
+Right Bumper	오른쪽 범퍼
+Guide	가이드
+Left Mouse Button	마우스 왼쪽 버튼
+Right Mouse Button	마우스 오른쪽 버튼
+Middle Mouse Button	마우스 가운데 버튼
+4th Mouse Button	마우스 4번 버튼
+5th Mouse Button	마우스 5번 버튼
+Mouse Wheel Up	마우스 휠 위로
+Mouse Wheel Down	마우스 휠 아래로
+Mouse Wheel Left	마우스 휠 왼쪽으로
+Mouse Wheel Right	마우스 휠 오른쪽으로
+Mouse Up	마우스 위로
+Mouse Down	마우스 아래로
+Mouse Left	마우스 왼쪽으로
+Mouse Right	마우스 오른쪽으로
+Abs Mouse Up	절대 마우스 위로
+Abs Mouse Down	절대 마우스 아래로
+Abs Mouse Left	절대 마우스 왼쪽으로
+Abs Mouse Right	절대 마우스 오른쪽으로
+Unbound	연결 해제
+360° turn — left stick calibration	360° 회전 — 왼쪽 스틱 보정
+360° turn — right stick calibration	360° 회전 — 오른쪽 스틱 보정
+Switch 2 Joy-Con Left SL	Switch 2 Joy-Con 왼쪽 SL
+Switch 2 Joy-Con Left SR	Switch 2 Joy-Con 왼쪽 SR
+Switch 2 Joy-Con Right SL	Switch 2 Joy-Con 오른쪽 SL
+Switch 2 Joy-Con Right SR	Switch 2 Joy-Con 오른쪽 SR
