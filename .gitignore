@@ -1,0 +1,8 @@
+upstream/
+bin/
+test-results/
+__pycache__/
+*.pyc
+SHA256.json
+BUILD-INFO.json
+packaged-resource-check.json

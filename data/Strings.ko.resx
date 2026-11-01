@@ -1,0 +1,1432 @@
+<?xml version='1.0' encoding='utf-8'?>
+<root xmlns:ns1="urn:schemas-microsoft-com:xml-msdata" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  
+  <xs:schema id="root">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xs:element name="root" ns1:IsDataSet="true">
+      <xs:complexType>
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="metadata">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" />
+              </xs:sequence>
+              <xs:attribute name="name" use="required" type="xsd:string" />
+              <xs:attribute name="type" type="xsd:string" />
+              <xs:attribute name="mimetype" type="xsd:string" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="assembly">
+            <xs:complexType>
+              <xs:attribute name="alias" type="xsd:string" />
+              <xs:attribute name="name" type="xsd:string" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+                <xs:element name="comment" type="xsd:string" minOccurs="0" ns1:Ordinal="2" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" ns1:Ordinal="1" />
+              <xs:attribute name="type" type="xsd:string" ns1:Ordinal="3" />
+              <xs:attribute name="mimetype" type="xsd:string" ns1:Ordinal="4" />
+              <xs:attribute ref="xml:space" />
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="resheader">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="value" type="xsd:string" minOccurs="0" ns1:Ordinal="1" />
+              </xs:sequence>
+              <xs:attribute name="name" type="xsd:string" use="required" />
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Accel" xml:space="preserve">
+    <value>가속도</value>
+  </data>
+  <data name="Action" xml:space="preserve">
+    <value>동작</value>
+  </data>
+  <data name="AddDirectory" xml:space="preserve">
+    <value>폴더 추가</value>
+  </data>
+  <data name="AddPrograms" xml:space="preserve">
+    <value>프로그램 추가</value>
+  </data>
+  <data name="AddWindowTitleRule" xml:space="preserve">
+    <value>창 제목 규칙 추가</value>
+  </data>
+  <data name="AddStartMenuPrograms" xml:space="preserve">
+    <value>시작 메뉴 프로그램 추가</value>
+  </data>
+  <data name="AddSteamGames" xml:space="preserve">
+    <value>Steam 게임 추가</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>모두</value>
+  </data>
+  <data name="AutoProfiles" xml:space="preserve">
+    <value>자동 프로필</value>
+  </data>
+  <data name="Battery" xml:space="preserve">
+    <value>배터리</value>
+  </data>
+  <data name="Browse" xml:space="preserve">
+    <value>찾아보기</value>
+  </data>
+  <data name="BrowseOtherPrograms" xml:space="preserve">
+    <value>다른 프로그램 찾아보기</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="CheckUpdateNow" xml:space="preserve">
+    <value>지금 업데이트 확인</value>
+  </data>
+  <data name="CheckUpdateStartup" xml:space="preserve">
+    <value>DS4Windows 시작 시 업데이트 확인</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>지우기</value>
+  </data>
+  <data name="CloseMinimizes" xml:space="preserve">
+    <value>닫을 때 최소화</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>색상</value>
+  </data>
+  <data name="Controller1Text" xml:space="preserve">
+    <value>컨트롤러 1</value>
+  </data>
+  <data name="Controller2Text" xml:space="preserve">
+    <value>컨트롤러 2</value>
+  </data>
+  <data name="Controller3Text" xml:space="preserve">
+    <value>컨트롤러 3</value>
+  </data>
+  <data name="Controller4Text" xml:space="preserve">
+    <value>컨트롤러 4</value>
+  </data>
+  <data name="Controllers" xml:space="preserve">
+    <value>컨트롤러</value>
+  </data>
+  <data name="ControlPanel" xml:space="preserve">
+    <value>제어판</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>삭제</value>
+  </data>
+  <data name="DriverSetup" xml:space="preserve">
+    <value>컨트롤러/드라이버 설정</value>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>복제</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>편집</value>
+  </data>
+  <data name="EditAction" xml:space="preserve">
+    <value>동작 편집</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>내보내기</value>
+  </data>
+  <data name="Full" xml:space="preserve">
+    <value>전체</value>
+  </data>
+  <data name="Gyro" xml:space="preserve">
+    <value>자이로</value>
+  </data>
+  <data name="HideUnchecked" xml:space="preserve">
+    <value>선택하지 않은 항목 숨기기</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>가져오기</value>
+  </data>
+  <data name="LeftStick" xml:space="preserve">
+    <value>왼쪽 스틱</value>
+  </data>
+  <data name="Log" xml:space="preserve">
+    <value>로그</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>이름</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>새로 만들기</value>
+  </data>
+  <data name="NewAction" xml:space="preserve">
+    <value>새 동작</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>새 프로필</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>없음</value>
+  </data>
+  <data name="Path" xml:space="preserve">
+    <value>경로</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>프로필</value>
+  </data>
+  <data name="ProfileFolder" xml:space="preserve">
+    <value>프로필 폴더</value>
+  </data>
+  <data name="QuickCharge" xml:space="preserve">
+    <value>빠른 충전</value>
+  </data>
+  <data name="RecordText" xml:space="preserve">
+    <value>기록</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>제거</value>
+  </data>
+  <data name="RemoveAction" xml:space="preserve">
+    <value>동작 제거</value>
+  </data>
+  <data name="RightStick" xml:space="preserve">
+    <value>오른쪽 스틱</value>
+  </data>
+  <data name="Rumble" xml:space="preserve">
+    <value>진동</value>
+  </data>
+  <data name="RunAtStartup" xml:space="preserve">
+    <value>로그인 시 실행</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="SaveProfile" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="ShowNotifications" xml:space="preserve">
+    <value>알림 표시</value>
+  </data>
+  <data name="StartMinimized" xml:space="preserve">
+    <value>최소화하여 시작</value>
+  </data>
+  <data name="StartText" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>상태</value>
+  </data>
+  <data name="StopText" xml:space="preserve">
+    <value>중지</value>
+  </data>
+  <data name="TouchScroll" xml:space="preserve">
+    <value>스크롤</value>
+  </data>
+  <data name="TouchSlide" xml:space="preserve">
+    <value>밀기</value>
+  </data>
+  <data name="TouchTap" xml:space="preserve">
+    <value>탭</value>
+  </data>
+  <data name="Trigger" xml:space="preserve">
+    <value>트리거</value>
+  </data>
+  <data name="WarningsOnly" xml:space="preserve">
+    <value>경고만</value>
+  </data>
+  <data name="RumbleMaxSecs" xml:space="preserve">
+    <value>초</value>
+  </data>
+  <data name="RumbleMaxSecsTip" xml:space="preserve">
+    <value>설정한 시간(초) 후 진동 자동 중지 (0 = 자동 중지 안 함)</value>
+  </data>
+  <data name="WindowTitle" xml:space="preserve">
+    <value>창 제목</value>
+  </data>
+  <data name="WindowTitleRule" xml:space="preserve">
+    <value>창 제목 규칙</value>
+  </data>
+  <data name="MoveUp" xml:space="preserve">
+    <value>위로 이동</value>
+  </data>
+  <data name="MoveDown" xml:space="preserve">
+    <value>아래로 이동</value>
+  </data>
+  <data name="AutoProfPathTip" xml:space="preserve">
+    <value>프로세스 경로. ^ABC = 문자열 시작 일치 (^) | ABC$ = 문자열 끝 일치 ($) | *ABC = 문자열 포함 (*)</value>
+  </data>
+  <data name="AutoProfTitleTip" xml:space="preserve">
+    <value>창 제목. ^ABC = 문자열 시작 일치 (^) | ABC$ = 문자열 끝 일치 ($) | *ABC = 문자열 포함 (*)</value>
+  </data>
+  <data name="GamepadTest" xml:space="preserve">
+    <value>게임패드 테스트</value>
+  </data>
+  <data name="EnableOutputDataToDS4" xml:space="preserve">
+    <value>DS4로 데이터 출력</value>
+  </data>
+  <data name="EnableOutputDataToDS4Tip" xml:space="preserve">
+    <value>DS4 게임패드에 라이트바와 진동 데이터를 주기적으로 전송합니다. 데이터 수신을 지원하지 않는 게임패드는 선택을 해제하세요.
+변경 사항은 게임패드를 다시 연결할 때 적용됩니다.</value>
+    <comment>To enter a line break into a string resource value in VisualStudio resource editor press Shift+Enter.</comment>
+  </data>
+  <data name="SendGameFeedbackToPhysicalController" xml:space="preserve">
+    <value>게임 피드백을 실제 컨트롤러로 전송</value>
+  </data>
+  <data name="SendGameFeedbackToPhysicalControllerTip" xml:space="preserve">
+    <value>권장 설정입니다. 게임의 진동, 변환된 DualSense 햅틱, 호환되는 적응형 트리거 효과 및 조명 정보를 연결된 실제 컨트롤러로 보냅니다. 출력을 수신할 수 없는 컨트롤러에서만 끄세요. 끄면 이러한 게임 피드백 효과가 사라집니다. 변경 후 컨트롤러를 다시 연결하세요.</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>적용</value>
+  </data>
+  <data name="HidNinja" xml:space="preserve">
+    <value>HidNinja</value>
+  </data>
+  <data name="CustomExeName" xml:space="preserve">
+    <value>사용자 지정 실행 파일 이름</value>
+  </data>
+  <data name="CustomExeNameInfo" xml:space="preserve">
+    <value>일부 게임은 DS4Windows.exe 또는 InputMapper.exe가 실행 중이면 DS4 입력을 무시합니다. DS4Windows.exe의 이름을 바꾸면 이 검사를 피할 수 있습니다. 여기에 이름을 지정하면 DS4Updater가 해당 이름의 사본도 자동으로 업데이트합니다. 확장자는 입력하지 마세요.
+
+예: whyme_DS4Windows</value>
+  </data>
+  <data name="XInputChecker" xml:space="preserve">
+    <value>XInputChecker</value>
+  </data>
+  <data name="Controller5Text" xml:space="preserve">
+    <value>컨트롤러 5</value>
+  </data>
+  <data name="Controller6Text" xml:space="preserve">
+    <value>컨트롤러 6</value>
+  </data>
+  <data name="Controller7Text" xml:space="preserve">
+    <value>컨트롤러 7</value>
+  </data>
+  <data name="Controller8Text" xml:space="preserve">
+    <value>컨트롤러 8</value>
+  </data>
+  <data name="GamepadGyroCameraDescription" xml:space="preserve">
+    <value>표준 XInput 또는 DS4 게임패드로 출력합니다. 자이로는 마우스처럼 작동하는 조이스틱에 연결됩니다.</value>
+  </data>
+  <data name="GamepadGyroCameraName" xml:space="preserve">
+    <value>게임패드 + 마우스형 조이스틱</value>
+  </data>
+  <data name="GamepadPresetDescription" xml:space="preserve">
+    <value>표준 게임패드로 출력합니다.</value>
+  </data>
+  <data name="GamepadPresetName" xml:space="preserve">
+    <value>게임패드</value>
+  </data>
+  <data name="KBMGyroMouseDescription" xml:space="preserve">
+    <value>가상 키보드와 마우스로 출력합니다. 게임패드를 지원하지 않는 FPS 게임에 유용합니다. 자이로는 가상 마우스에 연결됩니다.</value>
+  </data>
+  <data name="KBMGyroMouseName" xml:space="preserve">
+    <value>키보드·마우스 + 자이로 마우스</value>
+  </data>
+  <data name="KBMPresetDescription" xml:space="preserve">
+    <value>가상 키보드와 마우스로 출력합니다. 게임패드를 지원하지 않는 FPS 게임에 유용합니다.</value>
+  </data>
+  <data name="KBMPresetName" xml:space="preserve">
+    <value>키보드·마우스</value>
+  </data>
+  <data name="MixedGyroMousePresetDescription" xml:space="preserve">
+    <value>버튼과 축은 표준 게임패드에, 자이로는 가상 마우스에 연결합니다.</value>
+  </data>
+  <data name="MixedGyroMousePresetName" xml:space="preserve">
+    <value>게임패드 + 자이로 마우스</value>
+  </data>
+  <data name="MixedPresetDescription" xml:space="preserve">
+    <value>XInput 게임패드와 오른쪽 스틱 마우스를 함께 사용합니다.</value>
+  </data>
+  <data name="MixedPresetName" xml:space="preserve">
+    <value>게임패드 + 정밀 카메라</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="PresetIntroText" xml:space="preserve">
+    <value>프리셋을 사용하시겠습니까? 아니요를 선택하면 빈 게임패드 프로필로 편집기를 엽니다.</value>
+  </data>
+  <data name="Presets" xml:space="preserve">
+    <value>프리셋</value>
+  </data>
+  <data name="Changelog" xml:space="preserve">
+    <value>변경 내역</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>닫기</value>
+  </data>
+  <data name="Profiles" xml:space="preserve">
+    <value>프로필</value>
+  </data>
+  <data name="NoControllersConnected" xml:space="preserve">
+    <value>연결된 컨트롤러 없음 (최대 {0}개)</value>
+  </data>
+  <data name="FlickThreshold" xml:space="preserve">
+    <value>플릭 임계값</value>
+  </data>
+  <data name="FlickTime" xml:space="preserve">
+    <value>플릭 시간</value>
+  </data>
+  <data name="MinAngleThreshold" xml:space="preserve">
+    <value>최소 각도 임계값</value>
+  </data>
+  <data name="RealWorldCalibration" xml:space="preserve">
+    <value>실제 회전 보정</value>
+  </data>
+  <data name="ViGEmPluginFailure" xml:space="preserve">
+    <value>ViGEm 장치 연결 실패. 오류 코드 {0}. ViGEmBus 내부 문제일 수 있어 연결을 종료합니다. 문제가 계속되면 DS4Windows를 닫고 Windows를 다시 시작하세요.</value>
+  </data>
+  <data name="CRC32Fail" xml:space="preserve">
+    <value>무선 장치의 데이터 무결성 검사에 실패했습니다. 장치 연결을 종료합니다.</value>
+  </data>
+  <data name="FutureNetNotInstalled" xml:space="preserve">
+    <value>시스템에서 .NET 5 런타임을 찾지 못했습니다. 향후 DS4Windows 버전과의 호환성을 위해 .NET 5 런타임을 설치하세요. 이 창을 닫으면 다운로드 페이지가 열립니다.</value>
+  </data>
+  <data name="UpgradeNetCaption" xml:space="preserve">
+    <value>.NET 런타임을 업데이트하세요</value>
+  </data>
+  <data name="HidHide" xml:space="preserve">
+    <value>HidHide</value>
+  </data>
+  <data name="HidHideConfigClient" xml:space="preserve">
+    <value>HidHide 설정 도구</value>
+  </data>
+  <data name="ExclusiveAccess" xml:space="preserve">
+    <value>독점 접근</value>
+  </data>
+  <data name="HidGuardianAccess" xml:space="preserve">
+    <value>HidGuardian 접근</value>
+  </data>
+  <data name="HidHideAccess" xml:space="preserve">
+    <value>HidHide 접근</value>
+  </data>
+  <data name="SharedAccess" xml:space="preserve">
+    <value>공유 접근</value>
+  </data>
+  <data name="RenameProfile" xml:space="preserve">
+    <value>이름 바꾸기</value>
+  </data>
+  <data name="DisableVirtualController" xml:space="preserve">
+    <value>가상 컨트롤러 사용 안 함</value>
+  </data>
+  <data name="DisableVirtualControllerTip" xml:space="preserve">
+    <value>이 프로필을 사용하는 컨트롤러의 가상 장치를 생성하거나 연결하지 않습니다. 프로필 저장 시 적용됩니다.</value>
+  </data>
+  <data name="EmulatedController" xml:space="preserve">
+    <value>에뮬레이션할 컨트롤러</value>
+  </data>
+  <data name="OutContNotice" xml:space="preserve">
+    <value>출력할 가상 컨트롤러 종류를 선택하세요. 프로필 저장 시 적용됩니다.</value>
+  </data>
+  <data name="VirtualControllerSettings" xml:space="preserve">
+    <value>가상 컨트롤러 설정</value>
+  </data>
+  <data name="ChangeOnNewDeviceConn" xml:space="preserve">
+    <value>변경 사항은 장치를 새로 연결할 때 적용됩니다</value>
+  </data>
+  <data name="StickFuzzTooltip" xml:space="preserve">
+    <value>활성 영역에서 스틱이 이 값 이상 움직여야 출력 변화를 인식합니다. 일정한 위치를 유지하지 못하는 마모된 스틱에 유용합니다. 값은 스틱의 원시 입력 단위입니다.</value>
+  </data>
+  <data name="StickMaxOutputForceTooltip" xml:space="preserve">
+    <value>최대 출력 설정을 항상 적용합니다. 최대 출력을 100%로 유지하거나 출력을 원형 범위로 제한할 때 유용합니다.</value>
+  </data>
+  <data name="StickMaxOutputTooltip" xml:space="preserve">
+    <value>아날로그 스틱의 최종 출력 최댓값을 제한합니다.</value>
+  </data>
+  <data name="AntiDeadzoneTooltip" xml:space="preserve">
+    <value>데드존을 벗어난 직후의 최소 출력값을 설정합니다. 게임 자체의 데드존을 넘는 데 유용합니다. 예를 들어 XInput 왼쪽 스틱의 게임 내 데드존은 보통 약 8000(25%)입니다. 이 설정이 없으면 DS4Windows와 게임 양쪽의 데드존을 모두 넘어야 합니다.</value>
+  </data>
+  <data name="StickInputCurveTooltip" xml:space="preserve">
+    <value>더 이상 권장하지 않는 구형 설정입니다. 데드존을 적용하기 전 원시 입력 좌표에 곡선을 적용하며 동작이 불안정할 수 있습니다.</value>
+  </data>
+  <data name="TouchpadMinThresholdTooltip" xml:space="preserve">
+    <value>마우스 이벤트를 전송하기 전에 필요한 최소 이동량입니다.</value>
+  </data>
+  <data name="TouchpadRotationTooltip" xml:space="preserve">
+    <value>터치패드 스와이프 방향을 회전시킵니다. 손가락을 곧게 움직여도 입력이 기울어지는 경우에 유용합니다. 범위: -180~180도. 기본값: 0.</value>
+  </data>
+  <data name="TouchpadSlideTooltip" xml:space="preserve">
+    <value>여러 손가락으로 마우스 휠 스크롤을 시작할 때의 감도입니다.</value>
+  </data>
+  <data name="TouchpadTapTooltip" xml:space="preserve">
+    <value>터치패드를 탭하면 마우스 왼쪽 클릭을 수행합니다. 최대 인식 시간은 (설정값 × 2)ms입니다.</value>
+  </data>
+  <data name="TouchpadTrackballEnableTooltip" xml:space="preserve">
+    <value>손가락을 떼어도 관성을 유지하여, 터치패드의 크기를 넘어 마우스 커서를 이동합니다.</value>
+  </data>
+  <data name="TouchpadTrackballFrictionTooltip" xml:space="preserve">
+    <value>가상 트랙볼의 마찰입니다. 낮출수록 커서가 더 오래 움직입니다.</value>
+  </data>
+  <data name="StickOuterBindDeadTooltip" xml:space="preserve">
+    <value>바깥 영역 동작을 실행하는 임계값입니다.</value>
+  </data>
+  <data name="StickOuterBindInvertTooltip" xml:space="preserve">
+    <value>임계값에 도달하기 전 동작을 실행하고, 임계값을 넘으면 해제합니다.</value>
+  </data>
+  <data name="StickOuterBindTooltip" xml:space="preserve">
+    <value>스틱 이동량이 임계값을 넘으면 실행할 동작입니다. 걷기나 달리기 키 연결에 유용합니다. 반전을 켜면 임계값에 도달하기 전까지 실행합니다.</value>
+  </data>
+  <data name="SASteeringWheelFuzzTooltip" xml:space="preserve">
+    <value>활성 영역에서 가속도 센서를 이 값 이상 회전해야 출력 변화를 인식합니다. 값은 센서의 원시 입력 단위입니다.</value>
+  </data>
+  <data name="StickRotationTooltip" xml:space="preserve">
+    <value>+ = 시계 방향, - = 반시계 방향.
+
+스틱을 움직일 때 엄지손가락 때문에 입력 방향이 기울어지는 현상을 보정합니다. 최종 출력 축을 지정한 각도만큼 회전합니다. 범위: -180~180도. 기본값: 0.</value>
+  </data>
+  <data name="TouchpadJitterCompTooltip" xml:space="preserve">
+    <value>터치패드의 작은 움직임을 억제합니다. 손가락을 거의 고정한 상태에서 생기는 의도하지 않은 커서 이동을 줄입니다.</value>
+  </data>
+  <data name="DS4BTPollRate" xml:space="preserve">
+    <value>DS4 Bluetooth 폴링 주기</value>
+  </data>
+  <data name="DS4LightbarPassthruDisabled" xml:space="preserve">
+    <value>드라이버 문제로 현재 사용할 수 없습니다. 향후 업데이트에서 해결될 수 있습니다.</value>
+  </data>
+  <data name="DualSRumbleForceGenericRescale" xml:space="preserve">
+    <value>일반 진동과 DualSense 전용 강도 설정을 모두 적용</value>
+  </data>
+  <data name="DualSRumbleModeDisabled" xml:space="preserve">
+    <value>사용 안 함</value>
+  </data>
+  <data name="DualSRumbleModeAccurate" xml:space="preserve">
+    <value>정밀</value>
+  </data>
+  <data name="DualSRumbleModeLegacy" xml:space="preserve">
+    <value>기존 방식</value>
+  </data>
+  <data name="DualSRumbleModeNPowerLevelTxt" xml:space="preserve">
+    <value>진동 모드 및 강도:</value>
+  </data>
+  <data name="DualSRumbleModePassthru" xml:space="preserve">
+    <value>그대로 전달</value>
+  </data>
+  <data name="DualSRumbleSpecificSettings" xml:space="preserve">
+    <value>DualSense 전용 진동 설정</value>
+  </data>
+  <data name="DualSRumbleForceGenericRescale_Tip" xml:space="preserve">
+    <value>끄는 것을 권장합니다.
+
+- 끔: 지정한 강도에 따라 컨트롤러가 자체적으로 진동을 조절합니다(더 나은 품질).
+
+- 켬: DS4Windows의 일반 진동 배율과 DualSense 자체 조절을 함께 적용합니다.</value>
+  </data>
+  <data name="DualSRumbleModes_Tip" xml:space="preserve">
+    <value>정밀 모드(권장):
+- DualShock 4/Xbox 360 진동을 더 잘 재현합니다.
+- 게임이 의도한 진동 효과를 더 정확히 표현합니다.
+- 같은 강도에서도 약한 진동부터 설정한 최대 강도까지 변화 폭이 큽니다.
+
+기존 방식:
+- 전반적으로 강하지만 세밀한 변화가 적고 더 날카롭게 느껴집니다.
+- 최소·최대 진동이 설정 강도의 바로 아래·위에 가깝습니다.
+
+사용 안 함:
+- 진동을 완전히 끕니다.</value>
+  </data>
+  <data name="DualSRumblePowerLevel_Tip" xml:space="preserve">
+    <value>DualSense 자체 진동 강도 조절입니다.
+
+- 정밀 모드의 [최소 // 최대] = [1% /// 설정 강도]
+  예(62%): [최소 = 1% /// 최대 = 62%]
+
+- 기존 방식의 [최소 /// 최대] ≈ [설정 강도 - 12% /// 설정 강도 + 12%]
+  예(62%): [최소 = 50% /// 최대 = 74%]</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>검정</value>
+  </data>
+  <data name="Colored" xml:space="preserve">
+    <value>컬러</value>
+  </data>
+  <data name="Default" xml:space="preserve">
+    <value>기본값</value>
+  </data>
+  <data name="DeviceType" xml:space="preserve">
+    <value>장치 종류</value>
+  </data>
+  <data name="DisconnectFromBtWhenStopping" xml:space="preserve">
+    <value>중지 시 Bluetooth 연결 해제</value>
+  </data>
+  <data name="Dynamic" xml:space="preserve">
+    <value>동적</value>
+  </data>
+  <data name="FlashLightbarAtHighLatency" xml:space="preserve">
+    <value>지연이 높을 때 라이트바 깜박임</value>
+  </data>
+  <data name="HideDS4Controller" xml:space="preserve">
+    <value>HidHide로 이중 입력 방지</value>
+  </data>
+  <data name="HotkeysAbout" xml:space="preserve">
+    <value>단축키/정보</value>
+  </data>
+  <data name="IconChoice" xml:space="preserve">
+    <value>아이콘 선택</value>
+  </data>
+  <data name="MinimizeToTaskbar" xml:space="preserve">
+    <value>작업 표시줄로 최소화</value>
+  </data>
+  <data name="MinimizeToTaskbarTip" xml:space="preserve">
+    <value>알림 영역 대신 작업 표시줄로 최소화합니다.</value>
+  </data>
+  <data name="OutputSlots" xml:space="preserve">
+    <value>출력 슬롯</value>
+  </data>
+  <data name="Permanent" xml:space="preserve">
+    <value>영구</value>
+  </data>
+  <data name="Plug" xml:space="preserve">
+    <value>연결</value>
+  </data>
+  <data name="RevertToDefaultProfileOnUnknown" xml:space="preserve">
+    <value>등록되지 않은 프로그램에서 기본 프로필 사용</value>
+  </data>
+  <data name="ShowAutoProfileDebugMessages" xml:space="preserve">
+    <value>자동 프로필 디버그 메시지 표시</value>
+  </data>
+  <data name="SwipeTouchpadToSwitchProfiles" xml:space="preserve">
+    <value>터치패드를 밀어 프로필 전환</value>
+  </data>
+  <data name="TurnOffDS4WindowsTemporarily" xml:space="preserve">
+    <value>DS4Windows 일시 중지</value>
+  </data>
+  <data name="Unplug" xml:space="preserve">
+    <value>연결 해제</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>흰색</value>
+  </data>
+  <data name="AppTheme" xml:space="preserve">
+    <value>앱 테마</value>
+  </data>
+  <data name="CheckEvery" xml:space="preserve">
+    <value>확인 주기</value>
+  </data>
+  <data name="OscServerHeading" xml:space="preserve">
+    <value>외부 OSC 제어 및 모니터링</value>
+  </data>
+  <data name="EnableOscServer" xml:space="preserve">
+    <value>제어 서버 사용</value>
+  </data>
+  <data name="EnableInterpretingOscMonitoring" xml:space="preserve">
+    <value>모니터링 메시지 해석</value>
+  </data>
+  <data name="EnableOscSender" xml:space="preserve">
+    <value>모니터링 서비스 사용</value>
+  </data>
+  <data name="ControllerSupportDS4" xml:space="preserve">
+    <value>DS4 컨트롤러 지원</value>
+  </data>
+  <data name="ControllerSupportDualSense" xml:space="preserve">
+    <value>DualSense 컨트롤러 지원</value>
+  </data>
+  <data name="ControllerSupportJoyCon" xml:space="preserve">
+    <value>Joy-Con 컨트롤러 지원</value>
+  </data>
+  <data name="ControllerSupportSwitchPro" xml:space="preserve">
+    <value>Switch Pro 컨트롤러 지원</value>
+  </data>
+  <data name="Copycat" xml:space="preserve">
+    <value>호환 컨트롤러 모드</value>
+  </data>
+  <data name="CopycatTip" xml:space="preserve">
+    <value>Sony 제품이 아닌 DS4 컨트롤러의 일부 플래그를 변경합니다. 일부 호환 제품의 진동과 라이트바 문제를 해결할 수 있습니다.</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>어둡게</value>
+  </data>
+  <data name="Days" xml:space="preserve">
+    <value>일</value>
+  </data>
+  <data name="DetectedControllers" xml:space="preserve">
+    <value>감지된 컨트롤러</value>
+  </data>
+  <data name="DeviceOptions" xml:space="preserve">
+    <value>장치 옵션</value>
+  </data>
+  <data name="EnableVerboseLog" xml:space="preserve">
+    <value>상세 로그 사용</value>
+  </data>
+  <data name="EnableVerboseLogTip" xml:space="preserve">
+    <value>게임패드 연결 시 추가 로그 메시지를 표시합니다.</value>
+  </data>
+  <data name="Hours" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="UseCustomSteamFolder" xml:space="preserve">
+    <value>사용자 지정 Steam 폴더 사용</value>
+  </data>
+  <data name="Utils" xml:space="preserve">
+    <value>도구</value>
+  </data>
+  <data name="Program" xml:space="preserve">
+    <value>프로그램</value>
+  </data>
+  <data name="RunAs" xml:space="preserve">
+    <value>실행 방식</value>
+  </data>
+  <data name="Task" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="GyroTriggerJitterCompensationTooltip" xml:space="preserve">
+    <value>곡선의 낮은 입력 영역에 억제를 추가하여 장치 흔들림을 보정합니다.</value>
+  </data>
+  <data name="WakeupFromSuspend" xml:space="preserve">
+    <value>절전 모드에서 복귀 중</value>
+  </data>
+  <data name="ControllerSupportDS3" xml:space="preserve">
+    <value>DS3 컨트롤러 지원</value>
+  </data>
+  <data name="FirstLaunch.DeviceIntroText" xml:space="preserve">
+    <value>Steam Input 같은 다른 매핑 프로그램은 여러 장치를 기본 지원하므로, DS4Windows는 기본적으로 DS4 입력만 활성화합니다. 여기서 다른 지원 장치를 선택할 수 있습니다. 여러 매핑 프로그램을 동시에 사용할 때 주의하세요.</value>
+  </data>
+  <data name="FirstLaunch.DS3EnableCkbLabel" xml:space="preserve">
+    <value>DS3 장치 지원</value>
+  </data>
+  <data name="FirstLaunch.DS3EnableText" xml:space="preserve">
+    <value>DualShock 3(PS3) 컨트롤러를 지원합니다. ViGEm 프로젝트(nefarius)의 DsHidMini 드라이버가 필요합니다.</value>
+  </data>
+  <data name="FirstLaunch.DS4EnableCkbLabel" xml:space="preserve">
+    <value>DS4 장치 지원</value>
+  </data>
+  <data name="FirstLaunch.DS4EnableText" xml:space="preserve">
+    <value>알려진 DualShock 4 컨트롤러를 지원합니다.</value>
+  </data>
+  <data name="FirstLaunch.DSEnableCkbLabel" xml:space="preserve">
+    <value>DualSense 장치 지원</value>
+  </data>
+  <data name="FirstLaunch.DSEnableText" xml:space="preserve">
+    <value>DualSense(PS5) 기본 모델과 DualSense Edge를 지원합니다.</value>
+  </data>
+  <data name="FirstLaunch.Header" xml:space="preserve">
+    <value>입력 매핑을 사용할 장치</value>
+  </data>
+  <data name="FirstLaunch.JoyConEnableCkbLabel" xml:space="preserve">
+    <value>Joy-Con 장치 지원</value>
+  </data>
+  <data name="FirstLaunch.JoyConEnableText" xml:space="preserve">
+    <value>Joy-Con(Nintendo Switch) 컨트롤러를 지원합니다.</value>
+  </data>
+  <data name="FirstLaunch.SwitchProEnableCkbLabel" xml:space="preserve">
+    <value>Switch Pro 장치 지원</value>
+  </data>
+  <data name="FirstLaunch.SwitchProEnableText" xml:space="preserve">
+    <value>Switch Pro(Nintendo Switch) 컨트롤러를 지원합니다.</value>
+  </data>
+  <data name="FirstLaunch.WinTitle" xml:space="preserve">
+    <value>최초 실행</value>
+  </data>
+  <data name="AutoProfiles.DisplaySwitchVia" xml:space="preserve">
+    <value>프로필 전환 표시 방식</value>
+  </data>
+  <data name="AutoProfiles.LogAndNotification" xml:space="preserve">
+    <value>로그 + 알림</value>
+  </data>
+  <data name="Notification" xml:space="preserve">
+    <value>알림</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>밝게</value>
+  </data>
+  <data name="ProfileEditor.VirtualDS4TrigOutput" xml:space="preserve">
+    <value>DS4 트리거 출력 모드</value>
+  </data>
+  <data name="Analog" xml:space="preserve">
+    <value>아날로그</value>
+  </data>
+  <data name="Buttons" xml:space="preserve">
+    <value>버튼</value>
+  </data>
+  <data name="DS4OutputTriggersDefault" xml:space="preserve">
+    <value>기본값(아날로그 + 버튼)</value>
+  </data>
+  <data name="DeadZone" xml:space="preserve">
+    <value>데드존</value>
+  </data>
+  <data name="MaxZone" xml:space="preserve">
+    <value>최대 입력 구간</value>
+  </data>
+  <data name="AntiDeadZone" xml:space="preserve">
+    <value>안티 데드존</value>
+  </data>
+  <data name="Axial" xml:space="preserve">
+    <value>축별</value>
+  </data>
+  <data name="AxisConfig" xml:space="preserve">
+    <value>축 설정</value>
+  </data>
+  <data name="Controls" xml:space="preserve">
+    <value>버튼 설정</value>
+  </data>
+  <data name="Cubic" xml:space="preserve">
+    <value>3차 곡선</value>
+  </data>
+  <data name="DeadZone X" xml:space="preserve">
+    <value>X축 데드존</value>
+  </data>
+  <data name="DeadZone Y" xml:space="preserve">
+    <value>Y축 데드존</value>
+  </data>
+  <data name="DeadZoneType" xml:space="preserve">
+    <value>데드존 형태</value>
+  </data>
+  <data name="EaseoutCubic" xml:space="preserve">
+    <value>3차 감속 곡선</value>
+  </data>
+  <data name="EaseoutQuad" xml:space="preserve">
+    <value>2차 감속 곡선</value>
+  </data>
+  <data name="EnhancedPrecision" xml:space="preserve">
+    <value>정밀도 향상</value>
+  </data>
+  <data name="FlickStick" xml:space="preserve">
+    <value>플릭 스틱</value>
+  </data>
+  <data name="Linear" xml:space="preserve">
+    <value>선형</value>
+  </data>
+  <data name="MaxOutput" xml:space="preserve">
+    <value>최대 출력</value>
+  </data>
+  <data name="MouseOffset" xml:space="preserve">
+    <value>마우스 오프셋</value>
+  </data>
+  <data name="MouseVerticalScale" xml:space="preserve">
+    <value>마우스 수직 배율</value>
+  </data>
+  <data name="OutputCurve" xml:space="preserve">
+    <value>출력 곡선</value>
+  </data>
+  <data name="OutputMode" xml:space="preserve">
+    <value>출력 모드</value>
+  </data>
+  <data name="Quadratic" xml:space="preserve">
+    <value>2차 곡선</value>
+  </data>
+  <data name="Radial" xml:space="preserve">
+    <value>원형</value>
+  </data>
+  <data name="Sensitivity" xml:space="preserve">
+    <value>감도</value>
+  </data>
+  <data name="SixAxisAccel" xml:space="preserve">
+    <value>Sixaxis(가속도)</value>
+  </data>
+  <data name="SquareStick" xml:space="preserve">
+    <value>사각 스틱</value>
+  </data>
+  <data name="VerticalScale" xml:space="preserve">
+    <value>수직 배율</value>
+  </data>
+  <data name="AntiSnapback" xml:space="preserve">
+    <value>스냅백 방지</value>
+  </data>
+  <data name="AntiSnapbackTiming" xml:space="preserve">
+    <value>스냅백 방지 시간</value>
+  </data>
+  <data name="Touchpad" xml:space="preserve">
+    <value>터치패드</value>
+  </data>
+  <data name="ViGEm117MinNeeded" xml:space="preserve">
+    <value>ViGEmBus 1.17.333.0 이상에서만 작동합니다</value>
+  </data>
+  <data name="AbsoluteMouse" xml:space="preserve">
+    <value>절대 좌표 마우스</value>
+  </data>
+  <data name="AbsoluteMouseOptions" xml:space="preserve">
+    <value>절대 좌표 마우스 옵션</value>
+  </data>
+  <data name="AntiRadius" xml:space="preserve">
+    <value>안티 반경</value>
+  </data>
+  <data name="BindingWin.AbsMouse" xml:space="preserve">
+    <value>절대 좌표 마우스</value>
+  </data>
+  <data name="BindingWin.AbsMouseDown" xml:space="preserve">
+    <value>절대 좌표 마우스 아래</value>
+  </data>
+  <data name="BindingWin.AbsMouseLeft" xml:space="preserve">
+    <value>절대 좌표 마우스 왼쪽</value>
+  </data>
+  <data name="BindingWin.AbsMouseRight" xml:space="preserve">
+    <value>절대 좌표 마우스 오른쪽</value>
+  </data>
+  <data name="BindingWin.AbsMouseUp" xml:space="preserve">
+    <value>절대 좌표 마우스 위</value>
+  </data>
+  <data name="BindingWin.ChangeLight" xml:space="preserve">
+    <value>조명 변경</value>
+  </data>
+  <data name="BindingWin.ChangeMouseSensitivity" xml:space="preserve">
+    <value>마우스 감도 변경</value>
+  </data>
+  <data name="BindingWin.KeyAndRelMouse" xml:space="preserve">
+    <value>키보드·상대 좌표 마우스</value>
+  </data>
+  <data name="BindingWin.KeyboardAndMouse" xml:space="preserve">
+    <value>키보드·마우스</value>
+  </data>
+  <data name="BindingWin.MacroOn" xml:space="preserve">
+    <value>매크로 켜짐. 해제할 키를 선택하거나 창을 닫아 저장하세요.</value>
+  </data>
+  <data name="BindingWin.RecordAMacro" xml:space="preserve">
+    <value>매크로 기록</value>
+  </data>
+  <data name="BindingWin.SelectShiftTrigger" xml:space="preserve">
+    <value>전환 조건 선택</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="ControllerRegOptWin.EnableHomeLED" xml:space="preserve">
+    <value>홈 LED 사용</value>
+  </data>
+  <data name="ControllerRegOptWin.JoinedGyroProvider" xml:space="preserve">
+    <value>결합 시 자이로 제공 장치</value>
+  </data>
+  <data name="ControllerRegOptWin.LinkMode" xml:space="preserve">
+    <value>연결 모드</value>
+  </data>
+  <data name="ControllerRegOptWin.MuteLEDMode" xml:space="preserve">
+    <value>음소거 LED 모드</value>
+  </data>
+  <data name="ControllerRegOptWin.PlayerLEDMode" xml:space="preserve">
+    <value>플레이어 LED 모드</value>
+  </data>
+  <data name="ControllerRegOptWin.WinTitle" xml:space="preserve">
+    <value>컨트롤러 종류별 옵션</value>
+  </data>
+  <data name="DeltaAcceleration" xml:space="preserve">
+    <value>변화량 가속</value>
+  </data>
+  <data name="DirectionalSwipe" xml:space="preserve">
+    <value>방향별 스와이프</value>
+  </data>
+  <data name="EasingDuration" xml:space="preserve">
+    <value>완화 시간</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>사용</value>
+  </data>
+  <data name="EnableTouchpadToggle" xml:space="preserve">
+    <value>터치패드 전환 허용</value>
+  </data>
+  <data name="Extra" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="FirstLaunch.DeviceSupport" xml:space="preserve">
+    <value>장치 지원</value>
+  </data>
+  <data name="FlashRate" xml:space="preserve">
+    <value>깜박임 속도</value>
+  </data>
+  <data name="FullBtnPull" xml:space="preserve">
+    <value>끝까지 누를 때 버튼</value>
+  </data>
+  <data name="Fuzz" xml:space="preserve">
+    <value>최소 변화량</value>
+  </data>
+  <data name="GyroControlsAccel" xml:space="preserve">
+    <value>버튼 설정(가속도)</value>
+  </data>
+  <data name="Heavy" xml:space="preserve">
+    <value>강한 진동</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>높이</value>
+  </data>
+  <data name="HipFireDelay" xml:space="preserve">
+    <value>2단계 진입 지연</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="IdleDisconnect" xml:space="preserve">
+    <value>유휴 시 연결 해제</value>
+  </data>
+  <data name="LangPackControl.UseLangPack" xml:space="preserve">
+    <value>언어팩 사용</value>
+  </data>
+  <data name="LaunchProgramWithProfile" xml:space="preserve">
+    <value>프로필과 함께 프로그램 실행</value>
+  </data>
+  <data name="Lightbar" xml:space="preserve">
+    <value>라이트바</value>
+  </data>
+  <data name="LinkProfileId" xml:space="preserve">
+    <value>프로필/ID 연결</value>
+  </data>
+  <data name="MainWin.AbsDisplayMonitor" xml:space="preserve">
+    <value>절대 좌표 대상 모니터</value>
+  </data>
+  <data name="MainWin.EnableServer" xml:space="preserve">
+    <value>서버 사용</value>
+  </data>
+  <data name="MainWin.OneEuroBeta" xml:space="preserve">
+    <value>1€ 베타</value>
+  </data>
+  <data name="MainWin.OneEuroMinCutoff" xml:space="preserve">
+    <value>1€ 최소 차단 주파수</value>
+  </data>
+  <data name="MaxTravel" xml:space="preserve">
+    <value>최대 이동량</value>
+  </data>
+  <data name="MinFactor" xml:space="preserve">
+    <value>최소 계수</value>
+  </data>
+  <data name="MinTravel" xml:space="preserve">
+    <value>최소 이동량</value>
+  </data>
+  <data name="Mode" xml:space="preserve">
+    <value>모드</value>
+  </data>
+  <data name="Mouse" xml:space="preserve">
+    <value>마우스</value>
+  </data>
+  <data name="MouseAcceleration" xml:space="preserve">
+    <value>마우스 가속</value>
+  </data>
+  <data name="MouseJoystick" xml:space="preserve">
+    <value>마우스 조이스틱</value>
+  </data>
+  <data name="MouseSensitivity" xml:space="preserve">
+    <value>마우스 감도</value>
+  </data>
+  <data name="Multiplier" xml:space="preserve">
+    <value>배율</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>아니요</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>보통</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>기타</value>
+  </data>
+  <data name="OuterBind" xml:space="preserve">
+    <value>바깥 영역 동작</value>
+  </data>
+  <data name="OuterBtn" xml:space="preserve">
+    <value>바깥 영역 버튼</value>
+  </data>
+  <data name="OuterBtnDead" xml:space="preserve">
+    <value>바깥 버튼 임계값</value>
+  </data>
+  <data name="Passthru" xml:space="preserve">
+    <value>그대로 전달</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>포트</value>
+  </data>
+  <data name="RecordBox.AddRumble" xml:space="preserve">
+    <value>진동 추가</value>
+  </data>
+  <data name="RecordBox.ChangeLightbarColor" xml:space="preserve">
+    <value>라이트바 색상 변경</value>
+  </data>
+  <data name="RecordBox.DoubleClickWaitEdit" xml:space="preserve">
+    <value>대기 항목을 두 번 클릭하여 시간 수정</value>
+  </data>
+  <data name="RecordBox.FifthMB" xml:space="preserve">
+    <value>마우스 5번 버튼</value>
+  </data>
+  <data name="RecordBox.FourthMB" xml:space="preserve">
+    <value>마우스 4번 버튼</value>
+  </data>
+  <data name="RecordBox.InsertWait" xml:space="preserve">
+    <value>대기 삽입</value>
+  </data>
+  <data name="RecordBox.LoadPreset" xml:space="preserve">
+    <value>프리셋 불러오기</value>
+  </data>
+  <data name="RecordBox.MacroOrder" xml:space="preserve">
+    <value>매크로 순서</value>
+  </data>
+  <data name="RecordBox.PlayOnce" xml:space="preserve">
+    <value>한 번 실행</value>
+  </data>
+  <data name="RecordBox.RecordDelays" xml:space="preserve">
+    <value>입력 간격 기록</value>
+  </data>
+  <data name="RecordBox.RepeatWhileHeld" xml:space="preserve">
+    <value>누르는 동안 반복</value>
+  </data>
+  <data name="RecordBox.SavePreset" xml:space="preserve">
+    <value>프리셋 저장</value>
+  </data>
+  <data name="RecordBox.UseActionToRecord" xml:space="preserve">
+    <value>키보드·마우스와 컨트롤러 1로 기록</value>
+  </data>
+  <data name="RecordBoxWin.WinTitle" xml:space="preserve">
+    <value>매크로 편집</value>
+  </data>
+  <data name="Regular" xml:space="preserve">
+    <value>일반</value>
+  </data>
+  <data name="RenameProfileWin.TypeNewProfileName" xml:space="preserve">
+    <value>선택한 프로필 XML 파일의 새 이름을 입력하세요.</value>
+  </data>
+  <data name="RenameProfileWin.WinTitle" xml:space="preserve">
+    <value>프로필 이름 바꾸기</value>
+  </data>
+  <data name="Rotation" xml:space="preserve">
+    <value>회전</value>
+  </data>
+  <data name="ScanCode" xml:space="preserve">
+    <value>스캔 코드</value>
+  </data>
+  <data name="SelectedProfile" xml:space="preserve">
+    <value>선택한 프로필</value>
+  </data>
+  <data name="ShiftModifier" xml:space="preserve">
+    <value>전환 조건</value>
+  </data>
+  <data name="SkipVersion" xml:space="preserve">
+    <value>이 버전 건너뛰기</value>
+  </data>
+  <data name="SnapToCenter" xml:space="preserve">
+    <value>중앙에 맞춤</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>테스트</value>
+  </data>
+  <data name="TestHeavy" xml:space="preserve">
+    <value>강한 진동 테스트</value>
+  </data>
+  <data name="TestLight" xml:space="preserve">
+    <value>약한 진동 테스트</value>
+  </data>
+  <data name="Toggle" xml:space="preserve">
+    <value>전환</value>
+  </data>
+  <data name="TriggerEffect" xml:space="preserve">
+    <value>트리거 효과</value>
+  </data>
+  <data name="TwoStageMode" xml:space="preserve">
+    <value>2단계 모드</value>
+  </data>
+  <data name="UDPServer" xml:space="preserve">
+    <value>UDP 서버</value>
+  </data>
+  <data name="Unbound" xml:space="preserve">
+    <value>지정 안 됨</value>
+  </data>
+  <data name="UpdaterWin.WinTitle" xml:space="preserve">
+    <value>업데이트</value>
+  </data>
+  <data name="UseController" xml:space="preserve">
+    <value>컨트롤러 사용</value>
+  </data>
+  <data name="UseSmoothing" xml:space="preserve">
+    <value>보정 필터 사용</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>너비</value>
+  </data>
+  <data name="XCenter" xml:space="preserve">
+    <value>X축 중심</value>
+  </data>
+  <data name="YCenter" xml:space="preserve">
+    <value>Y축 중심</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>예</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>활성</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>현재</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>소개</value>
+  </data>
+  <data name="OutputSlotMan.InputNum" xml:space="preserve">
+    <value>입력 번호</value>
+  </data>
+  <data name="OutputSlotMan.XInputNum" xml:space="preserve">
+    <value>XInput 번호</value>
+  </data>
+  <data name="Pitch" xml:space="preserve">
+    <value>피치</value>
+  </data>
+  <data name="PresetOptWin.OutputController" xml:space="preserve">
+    <value>출력 컨트롤러</value>
+  </data>
+  <data name="PresetOptWin.PresetMenu" xml:space="preserve">
+    <value>프리셋 메뉴</value>
+  </data>
+  <data name="ReadingsControl.BatteryZero" xml:space="preserve">
+    <value>배터리: 0%</value>
+  </data>
+  <data name="ReadingsControl.InputDelayNA" xml:space="preserve">
+    <value>입력 지연: 해당 없음</value>
+  </data>
+  <data name="ReadingsControl.SixAxisXText" xml:space="preserve">
+    <value>Sixaxis: 읽기 쉽도록 X축을 반전했습니다</value>
+  </data>
+  <data name="Requested" xml:space="preserve">
+    <value>요청됨</value>
+  </data>
+  <data name="Roll" xml:space="preserve">
+    <value>롤</value>
+  </data>
+  <data name="Yaw" xml:space="preserve">
+    <value>요</value>
+  </data>
+  <data name="Appdata" xml:space="preserve">
+    <value>AppData</value>
+  </data>
+  <data name="ProgramFolder" xml:space="preserve">
+    <value>프로그램 폴더</value>
+  </data>
+  <data name="SaveWhere.AppDataDescText" xml:space="preserve">
+    <value>일반 설치용입니다. 설정을 %appdata%\DS4Windows에 저장합니다.</value>
+  </data>
+  <data name="SaveWhere.DontDelete" xml:space="preserve">
+    <value>다른 위치의 설정을 아직 삭제하지 않음</value>
+  </data>
+  <data name="SaveWhere.MultipleSaves" xml:space="preserve">
+    <value>설정 저장 위치가 여러 개 감지되었습니다</value>
+  </data>
+  <data name="SaveWhere.PickWhere" xml:space="preserve">
+    <value>프로필과 설정을 저장할 위치를 선택하세요</value>
+  </data>
+  <data name="SaveWhere.ProgramFolderDescText" xml:space="preserve">
+    <value>포터블 프로그램용입니다.
+참고: 관리자 권한이 필요한 폴더에서는 권한 상승 없이 사용할 수 없습니다.</value>
+  </data>
+  <data name="SaveWhere.WinTitle" xml:space="preserve">
+    <value>저장 위치</value>
+  </data>
+  <data name="Welcome.BluetoothSettings" xml:space="preserve">
+    <value>Bluetooth 설정</value>
+  </data>
+  <data name="Welcome.Step1HelpText" xml:space="preserve">
+    <value>설치 후 이 창이 다시 나타나면 PC를 다시 시작해야 할 수 있습니다.</value>
+  </data>
+  <data name="Welcome.Step1Text" xml:space="preserve">
+    <value>1단계: ViGEmBus 드라이버 설치</value>
+  </data>
+  <data name="Welcome.Step2HelpText" xml:space="preserve">
+    <value>이 PC에서 Xbox 360 컨트롤러를 사용한 적이 있다면 건너뛰어도 됩니다.</value>
+  </data>
+  <data name="Welcome.Step2Text" xml:space="preserve">
+    <value>2단계: Windows 7인 경우 Xbox 360 드라이버 설치</value>
+  </data>
+  <data name="Welcome.Step3BluetoothHelpText" xml:space="preserve">
+    <value>라이트바가 깜박이면 Bluetooth 설정에서 "Wireless Controller"에 연결하세요. 페어링 코드를 요청하면 0000을 입력하세요. 연결되면 사용할 수 있습니다.</value>
+  </data>
+  <data name="Welcome.Step3HelpText" xml:space="preserve">
+    <value>3단계: DualShock 4 컨트롤러 연결.
+USB 연결: micro-USB 케이블로 PC와 DualShock 4를 연결하세요.
+
+Bluetooth 연결(선택): PS 버튼과 Share 버튼을 3초간 누르면 라이트바가 두 번씩 깜박입니다.</value>
+    <comment>To enter a line break into a string resource value in VisualStudio resource editor press Shift+Enter.</comment>
+  </data>
+  <data name="Welcome.Step4HelpText" xml:space="preserve">
+    <value>HidHide로 입력 컨트롤러를 다른 앱에서 숨길 수 있습니다. 일부 게임은 컨트롤러가 하나만 보여야 하며, 이중 입력이 발생하면 문제가 생길 수 있습니다.</value>
+  </data>
+  <data name="Welcome.Step4Text" xml:space="preserve">
+    <value>(선택) 4단계: HidHide 드라이버 설치</value>
+  </data>
+  <data name="Welcome.Step5HelpText" xml:space="preserve">
+    <value>FakerInput 드라이버는 시스템 전체에서 사용할 가상 키보드, 상대·절대 좌표 마우스를 제공합니다. SendInput이 작동하지 않는 관리자 권한 프로세스, 게임, UAC 창 및 일부 안티치트 환경에서 유용합니다. Valorant 등 일부 게임에서 DS4Windows를 사용하려면 필요합니다.</value>
+  </data>
+  <data name="Welcome.Step5Text" xml:space="preserve">
+    <value>(선택) 5단계: FakerInput 드라이버 설치</value>
+  </data>
+  <data name="Welcome.WinTitle" xml:space="preserve">
+    <value>DS4Windows에 오신 것을 환영합니다</value>
+  </data>
+  <data name="SpecialActionEdit.CheckBattery" xml:space="preserve">
+    <value>배터리 잔량 확인</value>
+  </data>
+  <data name="SpecialActionEdit.DisconnectBT" xml:space="preserve">
+    <value>Bluetooth 연결 해제</value>
+  </data>
+  <data name="SpecialActionEdit.DoubleTapTrigger" xml:space="preserve">
+    <value>두 번 누르기 조건</value>
+  </data>
+  <data name="SpecialActionEdit.HoldFor" xml:space="preserve">
+    <value>누르는 시간</value>
+  </data>
+  <data name="SpecialActionEdit.HoldTrigger" xml:space="preserve">
+    <value>길게 누르기 조건</value>
+  </data>
+  <data name="SpecialActionEdit.KeepKeyState" xml:space="preserve">
+    <value>키 상태 유지</value>
+  </data>
+  <data name="SpecialActionEdit.LaunchProgram" xml:space="preserve">
+    <value>프로그램 실행</value>
+  </data>
+  <data name="SpecialActionEdit.LoadProfile" xml:space="preserve">
+    <value>프로필 불러오기</value>
+  </data>
+  <data name="SpecialActionEdit.MacroRecorded" xml:space="preserve">
+    <value>매크로 기록됨</value>
+  </data>
+  <data name="SpecialActionEdit.MultiAction" xml:space="preserve">
+    <value>다중 동작 버튼</value>
+  </data>
+  <data name="SpecialActionEdit.PressingUnloadTrigger" xml:space="preserve">
+    <value>해제 조건을 누를 때</value>
+  </data>
+  <data name="SpecialActionEdit.PressKey" xml:space="preserve">
+    <value>키 누르기/전환</value>
+  </data>
+  <data name="SpecialActionEdit.RecordMacro" xml:space="preserve">
+    <value>매크로 기록</value>
+  </data>
+  <data name="SpecialActionEdit.ReleasingUnloadTrigger" xml:space="preserve">
+    <value>해제 조건에서 손을 뗄 때</value>
+  </data>
+  <data name="SpecialActionEdit.RepeatWhileHeld" xml:space="preserve">
+    <value>누르는 동안 반복</value>
+  </data>
+  <data name="SpecialActionEdit.RunTriggerRelease" xml:space="preserve">
+    <value>조건 해제 시 실행</value>
+  </data>
+  <data name="SpecialActionEdit.SelectAction" xml:space="preserve">
+    <value>-동작 선택-</value>
+  </data>
+  <data name="SpecialActionEdit.SelectKey" xml:space="preserve">
+    <value>키 선택</value>
+  </data>
+  <data name="SpecialActionEdit.SelectMacro" xml:space="preserve">
+    <value>매크로 선택</value>
+  </data>
+  <data name="SpecialActionEdit.SetUnloadTrigger" xml:space="preserve">
+    <value>해제 조건 설정</value>
+  </data>
+  <data name="SpecialActionEdit.SixAxisWheelCalib" xml:space="preserve">
+    <value>Sixaxis 스티어링 휠 보정</value>
+  </data>
+  <data name="SpecialActionEdit.SyncRun" xml:space="preserve">
+    <value>동기화 실행</value>
+  </data>
+  <data name="SpecialActionEdit.TapTrigger" xml:space="preserve">
+    <value>탭 조건</value>
+  </data>
+  <data name="SpecialActionEdit.UnloadTriggerRelease" xml:space="preserve">
+    <value>조건에서 손을 떼면 프로필 해제</value>
+  </data>
+  <data name="SpecialActionEdit.UntoggleKeyBy" xml:space="preserve">
+    <value>키 전환 해제 방법</value>
+  </data>
+  <data name="SpecialActionEdit.ViaLightbar" xml:space="preserve">
+    <value>라이트바로 표시</value>
+  </data>
+  <data name="SpecialActionEdit.ViaNotification" xml:space="preserve">
+    <value>알림으로 표시</value>
+  </data>
+  <data name="UnloadTrigger" xml:space="preserve">
+    <value>해제 조건</value>
+  </data>
+  <data name="Net8NoticeWin.WinTitle" xml:space="preserve">
+    <value>.NET 8을 찾을 수 없음</value>
+  </data>
+  <data name="Net8NotInstalledWinNotice" xml:space="preserve">
+    <value>DS4Windows 3.3을 사용하려면 .NET 8 Desktop Runtime을 설치해야 합니다.  
+[https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.0-windows-{0}-installer](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-desktop-8.0.0-windows-{0}-installer)  
+
+내용을 확인했다면 확인을 누르세요. 취소를 누르면 다음 실행 시 다시 알립니다.</value>
+    <comment>Can use Markdown syntax</comment>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="Custom" xml:space="preserve">
+    <value>사용자 지정</value>
+  </data>
+  <data name="ControllerSupportMoonlight" xml:space="preserve">
+    <value>가상 컨트롤러 지원</value>
+  </data>
+  <data name="AdvancedSupport" xml:space="preserve">
+    <value>고급 지원</value>
+  </data>
+  <data name="UseDs3PitchRollSim" xml:space="preserve">
+    <value>[실험적] DS3 자이로 시뮬레이션 사용</value>
+  </data>
+  <data name="StickCalibration" xml:space="preserve">
+    <value>스틱 보정</value>
+  </data>
+  <data name="XAxisOffset" xml:space="preserve">
+    <value>X축 오프셋</value>
+  </data>
+  <data name="YAxisOffset" xml:space="preserve">
+    <value>Y축 오프셋</value>
+  </data>
+  <data name="AutomaticallyRecalibrateStick" xml:space="preserve">
+    <value>스틱 자동 재보정</value>
+  </data>
+  <data name="ProcessPriority" xml:space="preserve">
+    <value>프로세스 우선순위</value>
+  </data>
+  <data name="RealTimeNoAdmin" xml:space="preserve">
+    <value>실시간 우선순위를 선택하려면 관리자 권한으로 실행해야 합니다.</value>
+  </data>
+  <data name="ProfileSwitchNotification" xml:space="preserve">
+    <value>프로필 전환 알림 표시</value>
+  </data>
+  <data name="CreateLightbarMacro" xml:space="preserve">
+    <value>라이트바 매크로 만들기</value>
+  </data>
+  <data name="LightbarMode" xml:space="preserve">
+    <value>라이트바 모드</value>
+  </data>
+  <data name="SolidColor" xml:space="preserve">
+    <value>단색</value>
+  </data>
+  <data name="Macro" xml:space="preserve">
+    <value>매크로</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>추가</value>
+  </data>
+  <data name="ColorAndLength" xml:space="preserve">
+    <value>색상 및 길이</value>
+  </data>
+  <data name="SpecialActionEdit.CalibrateGyro" xml:space="preserve">
+    <value>자이로 보정</value>
+  </data>
+  <data name="HoldFor" xml:space="preserve">
+    <value>누르는 시간</value>
+  </data>
+  <data name="FailedToRetrieveLatestVersion" xml:space="preserve">
+    <value>최신 버전 정보를 가져오지 못했습니다</value>
+  </data>
+  <data name="CancelCurrentMacro" xml:space="preserve">
+    <value>실행 중인 매크로 취소</value>
+  </data>
+  <data name="CancelCurrentMacroTooltip" xml:space="preserve">
+    <value>이 매크로를 실행할 때 이미 실행 중인 매크로를 중지할지 지정합니다.</value>
+  </data>
+  <data name="ExportSpecialActions" xml:space="preserve">
+    <value>동작 내보내기</value>
+  </data>
+  <data name="InverseMotors" xml:space="preserve">
+    <value>모터 반전</value>
+  </data>
+</root>

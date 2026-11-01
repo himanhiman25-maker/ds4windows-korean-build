@@ -1,0 +1,131 @@
+name: Build DS4Windows 4.6.7 Korean
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ds4windows-korean-build
+  cancel-in-progress: false
+
+jobs:
+  build:
+    # Public-repository standard runners only. Never spend private-repo quota.
+    if: github.event.repository.private == false
+    runs-on: windows-2022
+    timeout-minutes: 30
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: '1'
+      DOTNET_SKIP_FIRST_TIME_EXPERIENCE: '1'
+      PYTHONUTF8: '1'
+      BUILD_LABEL: VIIPERRC4.6.7-ko.1
+    steps:
+      - name: Check out Korean overlay
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check out the exact upstream release
+        uses: actions/checkout@v4
+        with:
+          repository: hbashton/DS4Windows
+          ref: 080495de61ae8b6ada6b4252337838e8b22119b8
+          path: upstream
+          persist-credentials: false
+
+      - name: Set up .NET 8 on GitHub's server
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Set up Python on GitHub's server
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply Korean source overlay
+        run: python apply_korean.py upstream
+
+      - name: Validate text, placeholders and unchanged control bindings
+        run: python validate_korean.py upstream
+
+      - name: Run upstream tests and Korean resource checks
+        shell: pwsh
+        run: |
+          dotnet test upstream/DS4WindowsTests/DS4WindowsTests.csproj -c Release -p:Platform=x64 --logger "trx;LogFileName=tests.trx" --results-directory "$env:GITHUB_WORKSPACE/test-results"
+          if ($LASTEXITCODE -ne 0) { throw 'Tests failed. No application package will be published.' }
+
+      - name: Build the x64 application
+        shell: pwsh
+        run: |
+          dotnet publish upstream/DS4Windows/DS4WinWPF.csproj -c Release -p:Platform=x64 -r win-x64 --self-contained true -p:InformationalVersion=$env:BUILD_LABEL -o "$env:GITHUB_WORKSPACE/bin/x64/Release/output"
+          if ($LASTEXITCODE -ne 0) { throw 'Application build failed.' }
+
+      - name: Compose the offline portable package
+        run: python upstream/utils/post-build.py bin/x64/Release/output upstream ${{ env.BUILD_LABEL }}
+
+      - name: Check Korean resources in the actual packaged Lang layout
+        shell: pwsh
+        run: |
+          dotnet build support/ResourceProbe/ResourceProbe.csproj -c Release -o "$env:RUNNER_TEMP/korean-probe"
+          if ($LASTEXITCODE -ne 0) { throw 'Resource probe build failed.' }
+          $package = Join-Path $env:GITHUB_WORKSPACE 'bin/x64/Release/DS4Windows'
+          $probe = Join-Path $package 'KoreanResourceProbe.dll'
+          Copy-Item -LiteralPath "$env:RUNNER_TEMP/korean-probe/KoreanResourceProbe.dll" -Destination $probe
+          try {
+            Push-Location -LiteralPath $env:RUNNER_TEMP
+            try {
+              dotnet exec --depsfile "$package/DS4Windows.deps.json" --runtimeconfig "$package/DS4Windows.runtimeconfig.json" $probe "$env:GITHUB_WORKSPACE/upstream" | Tee-Object -FilePath "$env:GITHUB_WORKSPACE/packaged-resource-check.json"
+              if ($LASTEXITCODE -ne 0) { throw 'Packaged Korean resource loading failed.' }
+            } finally { Pop-Location }
+          } finally { Remove-Item -LiteralPath $probe -ErrorAction SilentlyContinue }
+
+      - name: Record source and package checksums
+        shell: pwsh
+        run: |
+          $archives = @(Get-ChildItem -LiteralPath 'bin/x64/Release' -Filter 'DS4Windows_*.zip')
+          if ($archives.Count -ne 1) { throw 'Expected exactly one application ZIP.' }
+          $zip = $archives[0]
+          Get-FileHash -LiteralPath $zip.FullName -Algorithm SHA256 | Select-Object @{Name='File';Expression={$zip.Name}},Hash | ConvertTo-Json | Set-Content 'SHA256.json' -Encoding utf8
+          @{
+            UpstreamCommit = '080495de61ae8b6ada6b4252337838e8b22119b8'
+            OverlayCommit = '${{ github.sha }}'
+            BuildLabel = $env:BUILD_LABEL
+            RuntimeAcceptance = 'Pending validation on a physical controller'
+          } | ConvertTo-Json | Set-Content 'BUILD-INFO.json' -Encoding utf8
+          @"
+          ## Korean build completed
+          Download **DS4Windows-4.6.7-Korean-x64** below.
+          The package is an unofficial Korean build, not the author's signed release.
+          Static checks, unit tests, compilation and packaged resource loading passed.
+          Physical controller and interactive layout acceptance remain required.
+          Artifacts expire after 1 day; save the ZIP promptly.
+          "@ | Out-File -FilePath $env:GITHUB_STEP_SUMMARY -Encoding utf8 -Append
+
+      - name: Upload the application and verification reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: DS4Windows-4.6.7-Korean-x64
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
+          path: |
+            bin/x64/Release/DS4Windows_*.zip
+            SHA256.json
+            BUILD-INFO.json
+            packaged-resource-check.json
+            upstream/korean-static-validation.json
+            upstream/korean-localization-report.json
+            README.md
+            LICENSE.txt
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: DS4Windows-Korean-test-results
+          retention-days: 1
+          if-no-files-found: ignore
+          path: test-results/*.trx
