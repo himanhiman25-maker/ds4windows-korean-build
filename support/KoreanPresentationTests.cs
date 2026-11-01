@@ -10,6 +10,30 @@ namespace DS4WindowsTests;
 public sealed class KoreanPresentationTests
 {
     [TestMethod]
+    public void LocalizedDefaultActionKeepsItsStoredIdentityAndCustomNames()
+    {
+        var previous = CultureInfo.CurrentUICulture;
+        try
+        {
+            CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo("ko-KR");
+            var action = new DS4Windows.SpecialAction("Disconnect Controller", "PS/Options", "DisconnectBT", "");
+            var row = new DS4WinWPF.DS4Forms.ViewModels.SpecialActionItem(action, "Bluetooth 연결 해제", 0);
+            Assert.AreEqual("Disconnect Controller", row.ActionName);
+            Assert.AreEqual("컨트롤러 연결 해제", row.LocalizedActionName);
+            Assert.AreEqual("PS/Options", action.controls);
+            Assert.AreEqual("PS, 옵션", row.Controls);
+            bool notified = false;
+            row.LocalizedActionNameChanged += (_, _) => notified = true;
+            row.ActionName = "Left"; // A user name that also exists in the UI dictionary.
+            row.Refresh();
+            Assert.IsTrue(notified);
+            Assert.AreEqual("Left", action.name);
+            Assert.AreEqual("Left", row.LocalizedActionName);
+        }
+        finally { CultureInfo.CurrentUICulture = previous; }
+    }
+
+    [TestMethod]
     public void PresentationPreservesValuesAndEnglishFallback()
     {
         var previous = CultureInfo.CurrentUICulture;

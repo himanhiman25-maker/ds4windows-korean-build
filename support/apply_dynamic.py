@@ -141,7 +141,10 @@ def apply(source, bundle):
     replace(s,'public event EventHandler ActionNameChanged;',
         'public string LocalizedActionName => specialAction.typeID == SpecialAction.ActionTypeId.DisconnectBT &&\n'+
         '            specialAction.name == "Disconnect Controller" ? '+CALL+'(specialAction.name) : specialAction.name;\n'+
-        '        public event EventHandler ActionNameChanged;')
+        '        public event EventHandler ActionNameChanged;\n'+
+        '        public event EventHandler LocalizedActionNameChanged;')
+    replace(s,'ActionNameChanged?.Invoke(this, EventArgs.Empty);',
+        'ActionNameChanged?.Invoke(this, EventArgs.Empty);\n            LocalizedActionNameChanged?.Invoke(this, EventArgs.Empty);')
     replace(s,'public string Controls { get => specialAction.controls.Replace("/", ", "); }',
         'public string Controls { get => '+CALL+'(specialAction.controls.Replace("/", ", ")); }')
 
