@@ -9,6 +9,12 @@ using System.Xml.Linq;
 string source = Path.GetFullPath(args[0]);
 Assembly app = AssemblyLoadContext.Default.LoadFromAssemblyPath(
     Path.Combine(AppContext.BaseDirectory, "DS4Windows.dll"));
+// Loading an assembly for reflection does not run its module initializer.
+// Register the same resource resolver used at application startup, following
+// upstream's own SatelliteResourceProbe; do not invoke the app entry point.
+app.GetType("DS4Windows.SatelliteResourceLoader", throwOnError: true)!
+    .GetMethod("Initialize", BindingFlags.Static | BindingFlags.NonPublic)!
+    .Invoke(null, null);
 int count = 0;
 foreach (var spec in new[] { ("Translations", "Strings"), ("Properties", "Resources") })
 {
@@ -28,5 +34,6 @@ foreach (var spec in new[] { ("Translations", "Strings"), ("Properties", "Resour
 var satellite = app.GetSatelliteAssembly(CultureInfo.GetCultureInfo("ko"));
 Console.WriteLine(JsonSerializer.Serialize(new {
     Passed = true, Entries = count, Cultures = new[] { "ko", "ko-KR" },
-    Satellite = satellite.Location, AppEntryPointInvoked = false
+    Satellite = satellite.Location, ResourceLoaderInitialized = true,
+    AppEntryPointInvoked = false
 }));

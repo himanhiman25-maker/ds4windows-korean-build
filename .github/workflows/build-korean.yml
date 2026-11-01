@@ -15,7 +15,7 @@ concurrency:
 jobs:
   upstream-baseline:
     # Diagnose whether any headless WPF failures also exist without our overlay.
-    if: github.event.repository.private == false && github.event_name == 'push'
+    if: github.event.repository.private == false && github.event_name == 'push' && contains(github.event.head_commit.message, '[compare-upstream]')
     runs-on: windows-2022
     timeout-minutes: 20
     env:
